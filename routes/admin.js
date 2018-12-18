@@ -4,62 +4,62 @@ var Admin = require('../controller/admin/admin');
 
 module.exports = function(app) {
 
-  //Ìø×ªµ½µÇÂ¼Ò³Ãæ
+  //è·³è½¬åˆ°ç™»å½•é¡µé¢
   app.get('/login',Admin.login);
-  //Ìø×ªµ½µÇÂ¼Ò³Ãæ
+  //è·³è½¬åˆ°ç™»å½•é¡µé¢
   app.get('/register',Admin.register);
-  // ºóÌ¨Ê×Ò³
+  // åå°é¦–é¡µ
   app.get('/admin', Admin.admin);
 
-  //Ìí¼ÓĞÂÎÅ
+  //æ·»åŠ æ–°é—»
   app.post('/admin/add_news', Admin.add_news);
-  //·ÖÒ³»ñÈ¡ĞÂÎÅ
+  //åˆ†é¡µè·å–æ–°é—»
   app.post('/admin/get_news', Admin.get_news);
-  //²é¿´ĞÂÎÅÏêÇé
+  //æŸ¥çœ‹æ–°é—»è¯¦æƒ…
   app.post('/admin/news_content', Admin.get_news_detail);
-  //É¾³ıĞÂÎÅ
+  //åˆ é™¤æ–°é—»
   app.post('/admin/news_del', Admin.del_one);
 
-  //Ìí¼ÓÕĞÆ¸
+  //æ·»åŠ æ‹›è˜
   app.post('/admin/add_recruit', Admin.add_recruit);
-  //»ñÈ¡ÕĞÆ¸ĞÅÏ¢
+  //è·å–æ‹›è˜ä¿¡æ¯
   app.post('/admin/get_recruits', Admin.get_recruits);
-  //²é¿´ÕĞÆ¸ÏêÇé
+  //æŸ¥çœ‹æ‹›è˜è¯¦æƒ…
   app.post('/admin/recruit_content', Admin.get_recruit_content);
-  //²é¿´ÕĞÆ¸
+  //æŸ¥çœ‹æ‹›è˜
   app.post('/admin/recruit_del', Admin.del_recruit);
 
-  //Ìí¼ÓÀëÖ°¹«Ê¾
+  //æ·»åŠ ç¦»èŒå…¬ç¤º
   app.post('/admin/add_quit', Admin.add_quit);
-  //·ÖÒ³»ñÈ¡ÀëÖ°¹«Ê¾
+  //åˆ†é¡µè·å–ç¦»èŒå…¬ç¤º
   app.post('/admin/get_quits', Admin.get_quits);
-  //É¾³ıÀëÖ°¹«Ê¾
+  //åˆ é™¤ç¦»èŒå…¬ç¤º
   app.post('/admin/quit_del', Admin.del_quit);
 
-  //Ìí¼Ó¹ÜÀíÔ±
+  //æ·»åŠ ç®¡ç†å‘˜
   app.post('/admin/post_user', Admin.add_admin);
-  //·ÖÒ³»ñÈ¡¹ÜÀíÔ±
+  //åˆ†é¡µè·å–ç®¡ç†å‘˜
   app.post('/admin/get_users', Admin.get_users);
-  //É¾³ı¹ÜÀíÔ±ĞÅÏ¢
+  //åˆ é™¤ç®¡ç†å‘˜ä¿¡æ¯
   app.post('/admin/user_del', Admin.user_del);
 
-  //Ìá½»µÇÂ¼ĞÅÏ¢£¬ÊµÏÖµÇÂ¼ĞÅÏ¢Ğ£Ñé
+  //æäº¤ç™»å½•ä¿¡æ¯ï¼Œå®ç°ç™»å½•ä¿¡æ¯æ ¡éªŒ
   app.post('/login',Admin.checkUser);
-  //Ìá½»×¢²áĞÅÏ¢£¬ÊµÏÖ×¢²áĞ£Ñé
+  //æäº¤æ³¨å†Œä¿¡æ¯ï¼Œå®ç°æ³¨å†Œæ ¡éªŒ
   app.post('/register',Admin.post_register);
-  //ÓÃ»§µÇ³ö²Ù×÷
+  //ç”¨æˆ·ç™»å‡ºæ“ä½œ
   app.get('/logout',Admin.logout);
-  //¸øĞÂ×¢²áµÄÓÃ»§ÊÚÈ¨
+  //ç»™æ–°æ³¨å†Œçš„ç”¨æˆ·æˆæƒ
   app.post('/authorize',Admin.authorize);
 
 
 
-  //·ÖÒ³»ñÈ¡ÓÃ»§·´À¡ĞÅÏ¢
+  //åˆ†é¡µè·å–ç”¨æˆ·åé¦ˆä¿¡æ¯
   app.post('/admin/get_feedbacks',Admin.get_feedbacks);
-  //·ÖÒ³»ñÈ¡ÓÃ»§·´À¡ĞÅÏ¢
+  //åˆ†é¡µè·å–ç”¨æˆ·åé¦ˆä¿¡æ¯
   app.post('/admin/deal_feedbacks',Admin.deal_feedbacks);
 
-  //ºóÌ¨Ö÷Ò³Ğ£ÑéÊÇ·ñÓĞÎ´´¦ÀíµÄ·´À¡ĞÅÏ¢
+  //åå°ä¸»é¡µæ ¡éªŒæ˜¯å¦æœ‰æœªå¤„ç†çš„åé¦ˆä¿¡æ¯
   app.get('/admin/check_feedbacks', Admin.check_feedbacks);
 
 

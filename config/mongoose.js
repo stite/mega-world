@@ -3,9 +3,10 @@
  */
 var mongoose=require('mongoose');
 var config=require('./db_url.js');
+mongoose.Promise = global.Promise;
 
 module.exports=function(){
-    var db=mongoose.connect(config.mongodb);
+    var db=mongoose.connection.openUri(config.mongodb);
     require('../model/user.js');
     require('../model/news.js');
     require('../model/recruit.js');

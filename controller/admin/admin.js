@@ -251,7 +251,7 @@ exports.checkUser = function(req, res) {
     var password=req.body.password;
     var captcha=req.body.captcha;
 
-    if(captcha!=req.session.captcha){
+    if(captcha.toLowerCase()!=req.session.captcha.toLowerCase()){
         console.log('captcha error');
         res.json({'status':'captcha error'});
     }else{ //验证码正确
@@ -294,7 +294,7 @@ exports.post_register = function(req, res) {
     var phone=req.body.phone;
     var captcha=req.body.captcha;
 
-    if(captcha!=req.session.captcha){
+    if(captcha.toLowerCase()!=req.session.captcha.toLowerCase()){
         console.log('captcha error');
         res.json({'status':'captcha error'});
     }else{//验证码正确

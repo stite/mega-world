@@ -14,6 +14,11 @@ var app = express();
 var mongoose=require('./config/mongoose.js');
 var db=mongoose();
 
+app.use(function(req, res, next){
+  console.log('Time', new Date(), req.url);
+  next();
+});
+
 
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));

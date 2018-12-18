@@ -3,72 +3,72 @@ var Index = require('../controller/web/index');
 
 
 module.exports = function(app) {
-  //Ê×Ò³
+  //é¦–é¡µ
   app.get('/', Index.index);
 
-  //×ß½ø³µĞ­
+  //èµ°è¿›è½¦å
   app.get('/company_intro', Index.company_intro);
   app.get('/culture', Index.culture);
   app.get('/organize', Index.organize);
   app.get('/process', Index.process);
 
-  //ĞÂÎÅÖĞĞÄ
+  //æ–°é—»ä¸­å¿ƒ
   app.get('/company_dynamic', Index.company_dynamic);
   app.get('/media_report', Index.media_report);
   app.get('/activity_report', Index.activity_report);
 
-  //·şÎñÖĞĞÄ
+  //æœåŠ¡ä¸­å¿ƒ
   app.get('/services1', Index.services1);
   app.get('/services2', Index.services2);
   app.get('/services3', Index.services3);
 
-  //ºÏ×÷»ï°é
+  //åˆä½œä¼™ä¼´
   app.get('/partner', Index.partner);
 
-  //ÈËÁ¦×ÊÔ´
+  //äººåŠ›èµ„æº
   app.get('/recruit', Index.recruit);
   app.get('/benefits', Index.benefits);
   app.get('/staff_style', Index.staff_style);
   app.get('/quit_notice', Index.quit_notice);
 
-  //ÁªÏµÎÒÃÇ
+  //è”ç³»æˆ‘ä»¬
   app.get('/contact_us', Index.contact_us);
 
-  //Ê×Ò³»ñÈ¡ĞÂÎÅ
+  //é¦–é¡µè·å–æ–°é—»
   app.get('/web/get_news', Index.get_news);
-  //Ê×Ò³»ñÈ¡ÕĞÆ¸ĞÅÏ¢
+  //é¦–é¡µè·å–æ‹›è˜ä¿¡æ¯
   app.get('/web/get_recruits', Index.get_recruits);
-  //Ê×Ò³»ñÈ¡ÀëÖ°¹«¸æĞÅÏ¢
+  //é¦–é¡µè·å–ç¦»èŒå…¬å‘Šä¿¡æ¯
   app.get('/web/get_quits', Index.get_quits);
-  //·ÖÀà»ñÈ¡ĞÂÎÅ
+  //åˆ†ç±»è·å–æ–°é—»
   app.post('/web/get_news_by_Category', Index.get_news_by_Category);
 
-  //»ñÈ¡¹«Ë¾¶¯Ì¬
+  //è·å–å…¬å¸åŠ¨æ€
   app.get('/news_detail/:id', Index.get_news_detail);
-  //»ñÈ¡¹«Ë¾¶¯Ì¬
+  //è·å–å…¬å¸åŠ¨æ€
   app.post('/news_detail/:id', Index.post_news_detail);
-  //»ñÈ¡Ã½Ìå±¨µÀ
+  //è·å–åª’ä½“æŠ¥é“
   app.get('/media_report_detail/:id', Index.get_media_report_detail);
-  //»ñÈ¡Ã½Ìå±¨µÀ
+  //è·å–åª’ä½“æŠ¥é“
   app.post('/media_report_detail/:id', Index.post_media_report_detail);
-  //»ñÈ¡»î¶¯±¨µÀ
+  //è·å–æ´»åŠ¨æŠ¥é“
   app.get('/activity_report_detail/:id', Index.get_activity_report_detail);
-  //»ñÈ¡»î¶¯±¨µÀ
+  //è·å–æ´»åŠ¨æŠ¥é“
   app.post('/activity_report_detail/:id', Index.post_activity_report_detail);
 
-  //ÈËÁ¦×ÊÔ´Ò³Ãæ
-  //·ÖÒ³»ñÈ¡ÕĞÆ¸ĞÅÏ¢
+  //äººåŠ›èµ„æºé¡µé¢
+  //åˆ†é¡µè·å–æ‹›è˜ä¿¡æ¯
   app.post('/web/get_recruits_page', Index.get_recruits_page);
-  //·ÖÒ³»ñÈ¡ÀëÖ°ĞÅÏ¢
+  //åˆ†é¡µè·å–ç¦»èŒä¿¡æ¯
   app.post('/web/get_quit_page', Index.get_quit_page);
 
-  //Ìø×ªµ½ÕĞÆ¸ÏêÇéÒ³Ãæ
+  //è·³è½¬åˆ°æ‹›è˜è¯¦æƒ…é¡µé¢
   app.get('/recruit_requirment/:id', Index.get_recruit_requirment);
-  //»ñÈ¡ÕĞÆ¸ÏêÇéĞÅÏ¢
+  //è·å–æ‹›è˜è¯¦æƒ…ä¿¡æ¯
   app.post('/recruit_requirment/:id', Index.post_recruit_requirment);
 
 
-  //ÓÃ»§Ìí¼Ó·´À¡ĞÅÏ¢
+  //ç”¨æˆ·æ·»åŠ åé¦ˆä¿¡æ¯
   app.post('/post_feedback', Index.post_feedback);
 
 
