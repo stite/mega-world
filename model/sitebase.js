@@ -7,7 +7,7 @@ var mongoose=require('mongoose');
 var  sitebase=new mongoose.Schema({
     title:String,
     keywords:String,
-    logo:String
+    description:String
 });
 
 mongoose.model('Sitebase',sitebase);

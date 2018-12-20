@@ -256,23 +256,51 @@ exports.siteconfig = function(req, res) {
 };
 
 exports.savesitebase = function(req, res) {
-    var sitebase = new Sitebase({
-        title: req.body.title,
-        keywords: req.body.keywords
-    });
+    var resJson = {code:"0000", msg:'保存成功', data: null};
+    if( req.body._id ) {
+        // 更新
+        Sitebase.update({}, {
+            title: req.body.title,
+            keywords: req.body.keywords,
+            description: req.body.description
+        }, function(err) {
+            if(err){
+                resJson.code = '0500';
+                resJson.msg = '保存失败';
+                resJson.err = err;
+            }
+            res.json(resJson);
+          });
 
-    sitebase.save(function(err){
-        if(err){
-            res.json({"status":"error"})
-        }else{
-            res.json({"status":"success"});
-        }
-    });
+    } else {
+        // 新增
+        var sitebase = new Sitebase({
+            title: req.body.title,
+            keywords: req.body.keywords
+        });
+
+        sitebase.save(function(err){
+            if(err){
+                resJson.code = '0500';
+                resJson.msg = '保存失败';
+                resJson.err = err;
+            }
+
+            res.json(resJson);
+        });
+    }
 }
 
 exports.getsitebase = function(req, res) {
+    var resJson = {code:"0000", msg:'查询成功', data: null};
     Sitebase.findOne(function(err,result){
-        res.json(result);
+        if (err) {
+            resJson.code = '0500';
+            resJson.msg = '查询失败'
+        } else {
+            resJson.data = result;
+        }
+        res.json(resJson);
     });
 }
 

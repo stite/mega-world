@@ -15,16 +15,22 @@
 			<legend>网站配置</legend>
 		</fieldset>
 
-		<form class="layui-form">
+		<form class="layui-form" lay-filter="sitebase">
+			<input type="hidden" name="_id">
 			<div class="layui-form-item">
 				<label class="layui-form-label">网站标题</label>
 				<div class="layui-input-block">
 					<input type="text" id="title" class="layui-input" name="title" autocomplete="off" placeholder="请输入网站标题/公司名称">
 				</div>
 			</div>
-
 			<div class="layui-form-item">
-				<label class="layui-form-label">SEO关键字</label>
+				<label class="layui-form-label">网站描述</label>
+				<div class="layui-input-block">
+					<input type="text" id="description" name="description" autocomplete="off" placeholder="请输入网站描述" class="layui-input">
+				</div>
+			</div>
+			<div class="layui-form-item">
+				<label class="layui-form-label">网站关键字</label>
 				<div class="layui-input-block">
 					<input type="text" id="keywords" name="keywords" autocomplete="off" placeholder="请输入关键字" class="layui-input">
 				</div>
@@ -39,28 +45,30 @@
 	</div>
 	<script type="text/javascript" src="/admin/plugins/layui/layui.js"></script>
 	<script>
-		layui.use(['form', 'laydate', 'upload'], function () {
+		layui.use(['form', 'layer'], function () {
 			var form = layui.form,
 				layer = layui.layer,
 				laydate = layui.laydate,
 				$ = layui.jquery;
+			var loading = layer.load();
 
-			form.val({title:'公司'});
-
-			$.get('/admin/getsitebase', function (data) {
-				form.val(data);
+			$.get('/admin/getsitebase', function (res) {
+				form.val('sitebase', res.data);
+				layer.close(loading);
 			})
 
 			form.on('submit', function (data) {
 				console.log(data.elem);
 				console.log(data.form);
 				console.log(data.field);
+				layer.load();
 
 				$.post(
 					"/admin/savesitebase",
 					data.field,
 					function (result) {
-						console.log('result', result);
+						layer.closeAll();
+						layer.msg(result.msg);
 					});
 
 				return false;
