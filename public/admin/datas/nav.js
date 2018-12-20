@@ -6,10 +6,6 @@ var navs = [{
 		"title": "网站信息",
 		"icon": "&#xe641;",
 		"href": "/admin/site_config"
-	}, {
-		"title": "首页配置",
-		"icon": "&#xe63c;",
-		"href": "add_admin.html"
 	}]
 },{
 	"title": "管理员管理",
