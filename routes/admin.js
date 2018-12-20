@@ -11,6 +11,12 @@ module.exports = function(app) {
   // 后台首页
   app.get('/admin', Admin.admin);
 
+  app.get('/admin/site_config', Admin.siteconfig);
+
+  //保存网站信息
+  app.post('/admin/savesitebase', Admin.savesitebase);
+  app.get('/admin/getsitebase', Admin.getsitebase);
+
   //添加新闻
   app.post('/admin/add_news', Admin.add_news);
   //分页获取新闻

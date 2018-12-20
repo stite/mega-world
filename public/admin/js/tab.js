@@ -1,11 +1,10 @@
 /** tab.js By Beginner Emain:zheng_jinfan@126.com HomePage:http://www.zhengjinfan.cn */
-layui.define(['element', 'common'], function(exports) {
+layui.define(['element'], function(exports) {
 	"use strict";
 
 	var mod_name = 'tab',
 		$ = layui.jquery,
-		element = layui.element(),
-		commom = layui.common,
+		element = layui.element,
 		globalTabIdIndex = 0,
 		Tab = function() {
 			this.config = {
@@ -63,7 +62,7 @@ layui.define(['element', 'common'], function(exports) {
 		ELEM.titleBox.find('li').each(function(i, e) {
 			var $cite = $(this).children('cite');
 			if($cite.text() === title) {
-				tabIndex = i;
+				tabIndex = $(e).attr('lay-id');
 			};
 		});
 		return tabIndex;
@@ -94,7 +93,8 @@ layui.define(['element', 'common'], function(exports) {
 			//添加tab
 			element.tabAdd(ELEM.tabFilter, {
 				title: title,
-				content: content
+				content: content,
+				id: globalTabIdIndex
 			});
 			//iframe 自适应
 			ELEM.contentBox.find('iframe[data-id=' + globalTabIdIndex + ']').each(function() {
@@ -103,11 +103,11 @@ layui.define(['element', 'common'], function(exports) {
 			if(_config.closed) {
 				//监听关闭事件
 				ELEM.titleBox.find('li').children('i.layui-tab-close[data-id=' + globalTabIdIndex + ']').on('click', function() {
-					element.tabDelete(ELEM.tabFilter, $(this).parent('li').index()).init();
+					element.tabDelete(ELEM.tabFilter, this.dataset.id).init();
 				});
 			};
 			//切换到当前打开的选项卡
-			element.tabChange(ELEM.tabFilter, ELEM.titleBox.find('li').length - 1);
+			element.tabChange(ELEM.tabFilter, globalTabIdIndex);
 		} else {
 			element.tabChange(ELEM.tabFilter, tabIndex);
 			//自动刷新
@@ -116,9 +116,6 @@ layui.define(['element', 'common'], function(exports) {
 			}
 		}
 	};
-	Tab.prototype.on = function(events, callback) {
-
-	}
 
 	var tab = new Tab();
 	exports(mod_name, function(options) {

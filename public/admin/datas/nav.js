@@ -1,4 +1,17 @@
 var navs = [{
+	"title": "基础资料",
+	"icon": "fa-cubes",
+	"spread": true,
+	"children": [{
+		"title": "网站信息",
+		"icon": "&#xe641;",
+		"href": "/admin/site_config"
+	}, {
+		"title": "首页配置",
+		"icon": "&#xe63c;",
+		"href": "add_admin.html"
+	}]
+},{
 	"title": "管理员管理",
 	"icon": "fa-cubes",
 	"spread": true,
@@ -32,15 +45,15 @@ var navs = [{
 		"title": "招聘列表",
 		"icon": "fa-check-square-o",
 		"href": "recruit_list.html"
-	},{
+	}, {
 		"title": "添加招聘",
 		"icon": "fa-qq",
 		"href": "add_recruit.html"
-	},{
+	}, {
 		"title": "离职公示列表",
 		"icon": "fa-github",
 		"href": "quit_notice_list.html"
-	},{
+	}, {
 		"title": "添加离职公示",
 		"icon": "&#xe609",
 		"href": "add_quit_notice.html"

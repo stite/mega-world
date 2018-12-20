@@ -10,6 +10,7 @@ var Recruit =mongoose.model('Recruit');
 var Quit =mongoose.model('Quit');
 var User=mongoose.model('User');
 var Feedback=mongoose.model('Feedback');
+var Sitebase=mongoose.model('Sitebase'); 
 
 // 首页
 exports.admin = function(req, res) {
@@ -17,8 +18,12 @@ exports.admin = function(req, res) {
     if(req.session.user.status==='2'){
         isSuper='超级管理员'
     }
-    res.render('admin/index',{username:req.session.user.username,isSuper:isSuper});
+    res.render('admin/index',{
+        username:req.session.user.username,
+        isSuper:isSuper
+    });
 };
+
 // 添加新闻
 exports.add_news = function(req, res) {
     var title=req.body.title;
@@ -244,6 +249,32 @@ exports.login = function(req, res) {
 exports.register = function(req, res) {
     res.render('admin/register');
 };
+
+// 配置网站信息
+exports.siteconfig = function(req, res) {
+    res.render('admin/siteconfig');
+};
+
+exports.savesitebase = function(req, res) {
+    var sitebase = new Sitebase({
+        title: req.body.title,
+        keywords: req.body.keywords
+    });
+
+    sitebase.save(function(err){
+        if(err){
+            res.json({"status":"error"})
+        }else{
+            res.json({"status":"success"});
+        }
+    });
+}
+
+exports.getsitebase = function(req, res) {
+    Sitebase.findOne(function(err,result){
+        res.json(result);
+    });
+}
 
 // post登录信息，校验
 exports.checkUser = function(req, res) {

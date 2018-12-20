@@ -1,7 +1,7 @@
 layui.config({
 	base: 'js/'
 }).use(['element', 'layer', 'navbar', 'tab'], function() {
-	var element = layui.element()
+	var element = layui.element;
 	$ = layui.jquery,
 		layer = layui.layer,
 		navbar = layui.navbar(),
