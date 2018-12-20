@@ -237,10 +237,8 @@ a .layui-nav-more{
 }
 /*超大屏幕*/
 @media screen and (min-width: 1200px) {
-  .main-news .content .news-img{width: 34%;}
+  .main-news .content .news-img{width: 15%;}
   .main-news .content .news-panel{width: 65%;}
-  .main-news .content:nth-child(odd){padding-right: 20px;}
-  .main-news .content:nth-child(even){padding-left: 20px;}
   .main-about .tabCour .timeline li .cour-panel{padding-left: 50px;}
   .main-about .tabCour .timeline li.odd .cour-panel{padding-left: 0; padding-right: 50px;}
 }
