@@ -16,12 +16,22 @@ layui.define(['jquery', 'element', 'carousel', 'laypage'], function(exports){
   carousel.render({
     elem: '#banner'
     ,width: '100%'
-    ,height: '608px'
+    ,height: '572px'
     ,arrow: 'none'
-    ,indicator: 'none'
+    ,indicator: 'inside'
     ,interval: '3000'
     ,anim:'fade'
-    ,full: true
+    ,full: false
+  });
+
+  carousel.render({
+    elem: '#project'
+    ,width: '100%'
+    ,height: '100%'
+    ,arrow: 'none'
+    ,indicator: 'inside'
+    ,interval: '3000'
+    ,anim:'updown'
   });
 
   //滚动监听

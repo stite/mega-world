@@ -1,60 +1,97 @@
 <%include ../common/include_header.html%>
 
- <!-- banner部分 -->
- <div>
-    <div class="layui-carousel" id="banner">
-      <div carousel-item>
-        <% for(var i=0; i<2; i++) { %>
-        <div style=<%="background:url(/web/img/banner"+ (i+1) +".jpg) no-repeat top center"%></div>>
-          <!-- <img src="/web/img/banner1.jpg"> -->
-          <!-- <div class="panel">
-            <p class="title">美佳华</p>
-            <p>引领城市新生活方式</p>
-          </div> -->
-        </div>
-        <% } %>
-      </div>
+<!-- banner部分 -->
+<div>
+  <div class="layui-carousel" id="banner">
+    <div carousel-item>
+      <div style="background:url(/web/img/banner2.jpg) no-repeat top center"></div>
+      <div style="background:url(/web/img/banner1.jpg) no-repeat top center"></div>
     </div>
   </div>
-  <!-- main部分 -->
-  <div class="main-product">
-    <div class="layui-container">
-      <p class="title" style="height: 400px;"></p>
-      <div class="layui-row layui-col-space25">
-        <% for(var i=0; i<4; i++) { %>
-        <div class="layui-col-sm6 layui-col-md3">
-          <div class="content">
-            <div><img src=<%="/web/img/Big_icon"+(i+1)+".png"%>></div>
-            <div>
-              <p class="label">发展战略</p>
-              <p>携手世界五百强商业企业及国内外知名商家，致力于国内三四线城市地产项目的投资</p>
-            </div>
-            <a href="javascript:;">查看产品 ></a>
-          </div>
-        </div>
-        <% } %>
-      </div>
-    </div>
-  </div>
-  <div class="main-service">
-    <div class="layui-container">
-      <p class="title">引领城市新<span>生活方式</span></p>
-      <div class="layui-row layui-col-space25 layui-col-space80">
-        <% for(var i=0; i<4; i++) { %>
-        <div class="layui-col-sm6">
-          <div class="content">
-            <div class="content-left"><img src="/web/img/home_img1.jpg"></div>
-            <div class="content-right">
-              <p class="label">美佳华</p>
-              <span></span>
-              <p>携手世界五百强商业企业及国内外知名商家，致力于国内三四线城市地产项目的投资</p>
+</div>
+<!-- main部分 -->
+<div class="main-product">
+  <div class="layui-container">
+    <div class="layui-row layui-col-space25">
+      <div class="layui-col-sm6 layui-col-md6">
+        <div class="content">
+          <div class="layui-carousel" id="project">
+            <div carousel-item>
+              <div>
+                <img width="100%" src="/web/img/project1.jpg" alt="">
+                <p class="project-title">美佳华项目-1</p>
+              </div>
+              <div>
+                <img width="100%" src="/web/img/project1.jpg" alt="">
+                <p class="project-title">美佳华项目-2</p>
+              </div>
+              <div>
+                <img width="100%" src="/web/img/project1.jpg" alt="">
+                <p class="project-title">美佳华项目-3</p>
+              </div>
+              <div>
+                <img width="100%" src="/web/img/project1.jpg" alt="">
+                <p class="project-title">美佳华项目-4</p>
+              </div>
             </div>
           </div>
         </div>
-        <% } %>
       </div>
-      <div class="service-more"></div>
+      <div class="layui-col-sm6 layui-col-md6">
+        <div id="news-wrapper">
+          <h2>公司新闻<a>更多新闻</a></h2>
+          <ul>
+            <li>
+              <span class="time">2017/08/03</span>
+              <span>铜川市与深圳美佳华实业有限公司举行座谈会</span>
+            </li>
+            <li>
+              <span class="time">2017/06/30</span>
+              <span>美佳华商业——倾听新的声音</span>
+            </li>
+            <li>
+              <span class="time">2018/08/03</span>
+              <span>商业地产企业在积极谋求转型</span>
+            </li>
+            <li>
+              <span class="time">2017/08/03</span>
+              <span>房地产作为国家的货币储存的资金池</span>
+            </li>
+            <li>
+              <span class="time">2017/08/03</span>
+              <span>未来应该说是中国产业地产黄金的十年</span>
+            </li>
+            <li>
+                <span class="time">2017/08/03</span>
+                <span>这是一条新闻，这是</span>
+              </li>
+          </ul>
+        </div>
+      </div>
     </div>
-  </div>
 
-  <%include ../common/include_footer.html%>
+    <div class="layui-row layui-col-space25">
+      <div class="layui-col-sm6 layui-col-md3">
+        <div class="main-p cy">
+          <p>产业</p>
+        </div>
+      </div>
+      <div class="layui-col-sm6 layui-col-md3">
+        <div class="main-p jr">
+          <p>金融</p>
+        </div>
+      </div>
+      <div class="layui-col-sm6 layui-col-md3">
+        <div class="main-p sy">
+          <p>商业</p>
+        </div>
+      </div>
+      <div class="layui-col-sm6 layui-col-md3">
+        <div class="main-p wy">
+          <p>物业</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<%include ../common/include_footer.html%>
