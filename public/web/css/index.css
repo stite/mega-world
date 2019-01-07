@@ -7,7 +7,10 @@
  */
 
 
-body{background: #fff8ec;}
+body{
+  background: #fff8ec;
+  font: 12px/1.5 tahoma,arial,'Hiragino Sans GB','\5b8b\4f53',sans-serif;
+}
 
 .layui-nav{display:none;}
 
@@ -28,14 +31,58 @@ body{background: #fff8ec;}
 .nav .layui-nav{width: 100%; position: absolute; top: 60px; right: 0; text-align:right; color: #000; background: transparent;}
 .nav .layui-nav .layui-nav-item{display: block; line-height: 60px;}
 .nav .layui-nav *{font-size: 14px;}
-.nav .layui-nav .layui-nav-item a{padding: 0 0; color: #000;}
+.nav .layui-nav .layui-nav-item > a{padding: 0 0; color: rgb(82, 54, 51);}
 .nav .layui-nav-bar,
-.nav .layui-nav .layui-this:after{height: 2px; background-color: #e53333;}
+.nav .layui-nav .layui-this:after{display: none;}
 .nav .layui-nav .layui-this a
 ,.nav .layui-nav .layui-nav-item a:hover{color: #e53333;}
-.layui-nav-child{top: 83px; border:none; background:rgba(255,255,255,.5)}
+.layui-nav .layui-nav-child a:hover{
+  background-color: transparent;
+  background-color: rgba(0,0,0,0);
+  color: #e53333;
+}
+.layui-nav-child{
+  top: 60px; 
+  border:none; 
+  background:none; 
+  box-shadow:none;
+}
+.layui-nav-child dd{
+  display: table-cell;
+}
+.layui-nav .layui-nav-child a{
+  color:#fff;
+}
+.layui-nav-child:after{
+  content: '';
+  position: absolute;
+  background-color: #feb52b;
+  opacity: 0.659;
+  height: 40px;
+  top: 0;
+  left: -1200px;
+  right: -1200px;
+  z-index: -1;
+}
+.layui-nav-child:before{
+  content: '';
+    position: absolute;
+    opacity: 0.659;
+    height: 0px;
+    width: 0px;
+    border-width: 0 5px 10px;
+    border-style: solid;
+    border-color: transparent transparent #feb52b;
+    top: -10px;
+    left: 20px;
+    z-index: -1;
+}
+.layui-nav .layui-nav-child a:hover{
+  background-color: none!important;
+}
+
 .layui-nav-child dd a {
-  padding: 0 30px!important;
+  padding: 0 5px!important;
 }
 a .layui-nav-more{
   display:none;
@@ -84,7 +131,6 @@ p.project-title{
 }
 #news-wrapper h2{
   font-size: 18px;
-  font-family: "Microsoft YaHei";
   color: rgb(82, 54, 51);
   font-weight: bold;
   line-height: 1.375;
@@ -100,9 +146,7 @@ p.project-title{
 
 #news-wrapper ul>li span{
   font-size: 16px;
-  font-family: "Microsoft YaHei";
   color: #666;
-  font-weight: bold;
   line-height: 2.389;
 }
 
@@ -300,7 +344,7 @@ p.project-title{
   .nav .nav-list button{display: none;}
   .layui-nav{display:block;}
   .nav .layui-nav{width: auto; position: absolute; top: 0; left:145px; padding: 0 5px; border-radius: 0; margin: 0;}
-  .nav .layui-nav .layui-nav-item{display: inline-block; margin:0 30px; line-height: 80px;}
+  .nav .layui-nav .layui-nav-item{display: inline-block; margin:0 12px; line-height: 60px;}
   .main-product p.title
   ,.main-service p.title{font-size: 36px; line-height: 216px;}
   .main.product .content .content-img{text-align: left;}
@@ -322,7 +366,7 @@ p.project-title{
 }
 @media screen and (min-width: 768px) and (max-width: 992px){
   .main.product .content div.right{padding-left: 20px;}
-  .nav .layui-nav .layui-nav-item{margin:0 33px;}
+  .nav .layui-nav .layui-nav-item{margin:0 10px;}
   .main-service .content .content-right{padding: 10px 10px 0 15px;}
   .main-service .content .content-right span{margin-bottom: 20px;}
   .main-service .content .content-right p{line-height: 28px;}
@@ -350,7 +394,7 @@ p.project-title{
   .main-news .content .news-panel{width: 65%;}
   .main-about .tabCour .timeline li .cour-panel{padding-left: 50px;}
   .main-about .tabCour .timeline li.odd .cour-panel{padding-left: 0; padding-right: 50px;}
-  .nav .layui-nav .layui-nav-item{display: inline-block; margin:0 34px; line-height: 60px;}
+  .nav .layui-nav .layui-nav-item{display: inline-block; margin:0 12px; line-height: 60px;}
 }
 @media screen and (min-width: 1300px) {
   .layui-container{width: 1200px; padding: 0;}

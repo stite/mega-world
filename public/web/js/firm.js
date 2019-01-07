@@ -40,11 +40,6 @@ layui.define(['jquery', 'element', 'carousel', 'laypage'], function(exports){
     scr > 0 ? $(".nav").addClass('scroll') : $(".nav").removeClass('scroll');
   });
 
-  //轮播文字
-  $(function(){
-    $('.banner').children('.title').addClass('active');
-  })
-
   //导航切换
   var btn = $('.nav').find('.nav-list').children('button')
   ,spa = btn.children('span')
