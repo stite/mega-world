@@ -11,9 +11,37 @@ exports.index = function (req, res) {
     });
 };
 
+// 关于美佳华
 exports.about = function (req, res) {
     Sitebase.findOne(function (err, result) {
         res.render('website/about/index', { pageName: '关于美佳华', site: result });
+    });
+};
+
+// 公司简介
+exports.profile = function (req, res) {
+    Sitebase.findOne(function (err, result) {
+        res.render('website/about/profile', { pageName: '公司简介', site: result });
+    });
+};
+// 企业文化
+exports.culture = function (req, res) {
+    Sitebase.findOne(function (err, result) {
+        res.render('website/about/culture', { pageName: '企业文化', site: result });
+    });
+};
+
+// 发展历程
+exports.history = function (req, res) {
+    Sitebase.findOne(function (err, result) {
+        res.render('website/about/history', { pageName: '企业文化', site: result });
+    });
+};
+
+// 公司荣誉
+exports.honor = function (req, res) {
+    Sitebase.findOne(function (err, result) {
+        res.render('website/about/honor', { pageName: '企业文化', site: result });
     });
 };
 
