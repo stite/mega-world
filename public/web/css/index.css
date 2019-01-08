@@ -232,7 +232,7 @@ p.project-title{
 
 
 /** 产品 */
-.banner{height: 320px; margin-top: 60px;}
+.banner{height: 320px;}
 .banner.product{background: url(../img/nav_img1.jpg) no-repeat center top; background-size: cover;}
 .main.product{padding: 30px 0 75px 0;}
 .main.product .content{padding: 50px 0; border-bottom: 1px solid #e8e8e8;}
@@ -284,7 +284,6 @@ p.project-title{
 
 
 /** 关于 */
-.banner.about{background: url(../img/header_bg.jpg) no-repeat center top; background-size: cover;}
 .main-about{padding-bottom: 130px;}
 .main-about ul.aboutab{padding: 100px 0; text-align: center;}
 .main-about ul.aboutab li{display: inline-block; padding: 0 22px; margin-left: 15px; font-size: 20px; line-height: 46px; color: #b5b5b5; border: 1px solid #e2e2e2; border-radius: 3px; cursor: pointer;}

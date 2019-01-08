@@ -11,6 +11,12 @@ exports.index = function (req, res) {
     });
 };
 
+exports.about = function (req, res) {
+    Sitebase.findOne(function (err, result) {
+        res.render('website/about/index', { pageName: '关于美佳华', site: result });
+    });
+};
+
 // 新闻中心
 exports.news_index = function (req, res) {
     Sitebase.findOne(function (err, result) {

@@ -6,6 +6,8 @@ module.exports = function(app) {
   //首页
   app.get('/', Index.index);
 
+  app.get('/about', Index.about);
+
   //新闻中心
   app.get('/news_index', Index.news_index);
 
