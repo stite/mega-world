@@ -65,3 +65,7 @@ exports.item_index = function (req, res) {
         res.render('website/item/item_index', { pageName: '项目中心', site: result });
     });
 }
+
+exports.load = function(req, res) {
+    res.render('website/index/loading');
+}

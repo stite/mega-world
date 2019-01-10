@@ -402,3 +402,7 @@ p.project-title{
   .layui-col-space80{margin: -40px;}
   .layui-col-space80>*{padding: 40px;}
 }
+
+.layui-breadcrumb span[lay-separator] {
+  margin: 0;
+}

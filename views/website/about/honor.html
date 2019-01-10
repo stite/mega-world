@@ -25,15 +25,23 @@
   .mega-this{
     border-bottom: 2px solid #e53333;
   }
+  .layui-breadcrumb{
+    float:right;
+    margin-bottom: 44px;
+  }
 </style>
 <div class="mega-banner"></div>
 <ul class="mega-nav">
-  <li class="mega-nav-item"><a href="/">公司简介</a></li>
-  <li class="mega-nav-item"><a href="/">企业文化</a></li>
-  <li class="mega-nav-item"><a href="/">发展历程</a></li>
-  <li class="mega-nav-item mega-this"><a href="/">公司荣誉</a></li>
+    <li class="mega-nav-item"><a href="/profile">公司简介</a></li>
+    <li class="mega-nav-item"><a href="/culture">企业文化</a></li>
+    <li class="mega-nav-item"><a href="/history">发展历程</a></li>
+    <li class="mega-nav-item mega-this"><a href="/honor">公司荣誉</a></li>
 </ul>
 <div class="layui-container">
-
+    <span class="layui-breadcrumb" lay-separator=">">
+        <a href="/">首页</a>
+        <a href="/about">关于美佳华</a>
+        <a><cite>公司荣誉</cite></a>
+      </span>
 </div>
 <%include ../common/include_footer.html%>

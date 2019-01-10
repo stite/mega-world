@@ -2,7 +2,7 @@
 
 <!-- banner部分 -->
 <div style="height:572px;">
-  <div class="layui-carousel animated bounce" id="banner">
+  <div class="layui-carousel animated bounceInDown" id="banner">
     <div carousel-item>
       <div style="background:url(/web/img/banner2.jpg) no-repeat top center"></div>
       <div style="background:url(/web/img/banner1.jpg) no-repeat top center"></div>
@@ -62,9 +62,9 @@
               <span>未来应该说是中国产业地产黄金的十年</span>
             </li>
             <li>
-                <span class="time">2017/08/03</span>
-                <span>这是一条新闻，这是</span>
-              </li>
+              <span class="time">2017/08/03</span>
+              <span>这是一条新闻，这是</span>
+            </li>
           </ul>
         </div>
       </div>
@@ -94,4 +94,29 @@
     </div>
   </div>
 </div>
+<script src="https://code.createjs.com/1.0.0/preloadjs.min.js"></script>
+<script>
+  // 优加载资源
+  setTimeout(function () {
+    var queue = new createjs.LoadQueue(true);
+
+    queue.loadManifest(
+      [
+        "web/img/culture.png",
+        "web/img/culture-main.png",
+
+        "web/img/history.png",
+        "web/img/history-main_01.png",
+        "web/img/history-main_02.png",
+        "web/img/history-main_03.png",
+        "web/img/history-main_04.png",
+
+        "web/img/profile.png",
+        "web/img/profile-main.png",
+
+        "web/img/honor.png"
+      ]
+    );
+  }, 0);  
+</script>
 <%include ../common/include_footer.html%>

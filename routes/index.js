@@ -3,6 +3,9 @@ var Index = require('../controller/web/index');
 
 
 module.exports = function (app) {
+  // 加载
+  app.get('/load', Index.load);
+
   //首页
   app.get('/', Index.index);
 
