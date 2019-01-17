@@ -31,6 +31,12 @@
     float:right;
     margin-bottom: 44px;
   }
+  .profile-main-p{
+    font-size: 1.5em;
+  }
+  .profile-main-img{
+    width: 88%;
+  }
 </style>
 <div class="mega-banner"></div>
 <ul class="mega-nav">
@@ -46,6 +52,13 @@
     <a href="/about">关于美佳华</a>
     <a><cite>公司简介</cite></a>
   </span>
-  <img class="animated fadeIn" style="width: 100%; margin-bottom: 80px;" src="/web/img/profile-main.png" alt="">
+  <div class="layui-row">
+    <div class="layui-col-md6">
+      <img class="layui-anim animated fadeInLeft" src="/web/img/profile-main.jpg" alt="" style="width:100%;">
+    </div>
+    <div class="layui-col-md6" style="text-align: center">
+      <p class="profile-main-p animated fadeInRight" style="color: #ff9d12; padding: 20px 0;">公司简介</p>
+      <img class="profile-main-img animated fadeInRight" src="/web/img/profile-p1.png" alt="">
+    </div>
 </div>
 <%include ../common/include_footer.html%>
