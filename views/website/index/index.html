@@ -1,12 +1,8 @@
 <%include ../common/include_header.html%>
 
 <!-- banner部分 -->
-<div style="height:572px;">
-  <div class="layui-carousel animated bounceInDown" id="banner">
-    <div carousel-item>
-      <div style="background:url(/web/img/banner2.jpg) no-repeat top center"></div>
-      <div style="background:url(/web/img/banner1.jpg) no-repeat top center"></div>
-    </div>
+<div>
+  <img src="/web/img/banner2.jpg" hegiht="572" width="100%" alt="">
   </div>
 </div>
 <!-- main部分 -->
@@ -18,19 +14,19 @@
           <div class="layui-carousel layui-anim layui-anim-upbit" style="animation-duration: 1.3s;" id="project">
             <div carousel-item>
               <div>
-                <img width="100%" src="/web/img/project1.png" alt="">
+                <img width="100%" src="/web/img/project1.jpg" alt="">
                 <p class="project-title">美佳华项目-1</p>
               </div>
               <div>
-                <img width="100%" src="/web/img/project1.png" alt="">
+                <img width="100%" src="/web/img/project1.jpg" alt="">
                 <p class="project-title">美佳华项目-2</p>
               </div>
               <div>
-                <img width="100%" src="/web/img/project1.png" alt="">
+                <img width="100%" src="/web/img/project1.jpg" alt="">
                 <p class="project-title">美佳华项目-3</p>
               </div>
               <div>
-                <img width="100%" src="/web/img/project1.png" alt="">
+                <img width="100%" src="/web/img/project1.jpg" alt="">
                 <p class="project-title">美佳华项目-4</p>
               </div>
             </div>
@@ -94,29 +90,5 @@
     </div>
   </div>
 </div>
-<script src="https://code.createjs.com/1.0.0/preloadjs.min.js"></script>
-<script>
-  // 优加载资源
-  setTimeout(function () {
-    var queue = new createjs.LoadQueue(true);
-
-    queue.loadManifest(
-      [
-        "web/img/culture.png",
-        "web/img/culture-main.png",
-
-        "web/img/history.png",
-        "web/img/history-main_01.png",
-        "web/img/history-main_02.png",
-        "web/img/history-main_03.png",
-        "web/img/history-main_04.png",
-
-        "web/img/profile.png",
-        "web/img/profile-main.png",
-
-        "web/img/honor.png"
-      ]
-    );
-  }, 0);  
-</script>
+<!-- <script src="https://code.createjs.com/1.0.0/preloadjs.min.js"></script> -->
 <%include ../common/include_footer.html%>
