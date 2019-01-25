@@ -1,97 +1,249 @@
 <%include ../common/include_header.html%>
+<style>
+  .main{
+    width: 1180px;
+    margin:0 auto;
+  }
+  .index-banner {
+    display: flex;
+    justify-content: center;
+  }
+
+  /* 右边红块 */
+  .right-box {
+    position: relative;
+  }
+
+  .right-box:after {
+    display: block;
+    position: absolute;
+    right: 0;
+    top: 50%;
+    width: 4px;
+    height: 17px;
+    background-color: #e02627;
+    content: '';
+  }
+
+  /* 通知部分 */
+  .notice {
+    border-bottom: 1px solid #f2a4a4;
+  }
+
+  .notice .right-box:after {
+    margin-top: -8.5px;
+  }
+
+  .notice-p {
+    position: relative;
+    left: 132px;
+    width: 627px;
+    height: 46px;
+    line-height: 46px;
+    font-size: 13px;
+    color: #333;
+  }
+
+  .notice-p .iconfont {
+    padding-right: 10px;
+    color: #bababa;
+  }
+
+  .notice-p .more {
+    float: right;
+    margin-right: 12px;
+    font-size: 13px;
+    color: #dcb763;
+  }
+
+  /* 模块2 */
+  .panel-2{
+    position: relative;
+    width: 920px;
+    padding-top: 34px;
+    height: 240px;
+    margin: 0 auto;
+  }
+  .panel-2 .news{
+    position: relative;
+    height: 218px;
+    width: 628px;
+  }
+  .panel-2 .item{
+    position: absolute;
+    right: 0;
+    top:34px;
+    width: 257px;
+    height: 240px;
+  }
+  .item .item-bk{
+    display: inline-block;
+    width: 124px;
+    height: 116px;
+    background-color: #e02627;
+    text-align: center;
+    color:#fff;
+    font-size: 18px;
+  }
+  .item .item-bk:nth-of-type(2) {
+    position: absolute;
+    right: 0;
+    top:0;
+  }
+  .item .item-bk:nth-of-type(3) {
+    position: absolute;
+    left: 0;
+    bottom:0;
+  }
+  .item .item-bk:nth-of-type(4) {
+    position: absolute;
+    right: 0;
+    bottom:0;
+  }
+  .panel-2 .item .iconfont{
+    display: block;
+    color: #fff;
+    font-size: 48px;
+    margin-bottom: -10px;
+    margin-top: 10px;
+  }
+
+  .news-left{
+    position:relative;
+    width: 315px;
+    height: 218px;
+  }
+  .news-right{
+    position: absolute;
+    right:0;
+    top:0;
+    width: 290px;
+    height: 218px;
+  }
+  .news .title{
+    color: #333;
+    font-size: 18px;
+    font-weight: bold;
+    border-bottom: 1px solid #e02627;
+    margin-bottom: 14px;
+  }
+  .abstract{
+    position: relative;
+  }
+  .abstract-time p {
+    font-size: 14px;
+    color: #333;
+  }
+  .abstract-title {
+    font-weight: bold;
+    line-height: 22px;
+  }
+  .abstract-content{
+    text-indent: 25px;
+    color: #858585;
+    font-size: 12px;
+    line-height: 20px;
+  }
+  .abstract-time span{
+    background-color: #e02627;
+    color: #fff;
+    line-height: 100%;
+  }
+  .news-right .abstract-time{
+    width: 40px;
+    position:absolute;
+    left:0;
+    top:0;
+  }
+  .news-right .abstract-title,
+  .news-right .abstract-content{
+    margin-left: 40px;
+  }
+  .more-btn {
+    position: absolute;
+    bottom:0;
+    right:0;
+    width: 65px;
+    height:28px;
+    line-height:28px;
+    border: 1px solid #e02627;
+    color: #333;
+    font-size: 12px;
+    text-align: center;
+  }
+  .more-btn .iconfont{
+    font-size: 12px;
+  }
+</style>
+
+
 
 <!-- banner部分 -->
-<div style="display:flex;">
+<div class="index-banner">
   <img src="/web/img/home/banner2_01.jpg" class="animated flipInY" height="572" alt="">
   <img src="/web/img/home/banner2_02.jpg" class="animated flipInY" height="572" alt="">
   <img src="/web/img/home/banner2_03.jpg" class="animated flipInY" height="572" alt="">
   <img src="/web/img/home/banner2_04.jpg" class="animated flipInY" height="572" alt="">
-  </div>
+</div>
 </div>
 <!-- main部分 -->
-<div class="main-product">
-  <div class="layui-container">
-    <div class="layui-row layui-col-space25">
-      <div class="layui-col-sm6 layui-col-md6">
-        <div class="content">
-          <div class="layui-carousel layui-anim layui-anim-upbit" style="animation-duration: 1.3s;" id="project">
-            <div carousel-item>
-              <div>
-                <img width="100%" src="/web/img/project1.jpg" alt="">
-                <p class="project-title">美佳华项目-1</p>
-              </div>
-              <div>
-                <img width="100%" src="/web/img/project1.jpg" alt="">
-                <p class="project-title">美佳华项目-2</p>
-              </div>
-              <div>
-                <img width="100%" src="/web/img/project1.jpg" alt="">
-                <p class="project-title">美佳华项目-3</p>
-              </div>
-              <div>
-                <img width="100%" src="/web/img/project1.jpg" alt="">
-                <p class="project-title">美佳华项目-4</p>
-              </div>
-            </div>
-          </div>
+<div class="main">
+  <div class="notice">
+    <p class="notice-p right-box">
+      <span class="iconfont icon-tongzhi"></span>
+      <span>美佳华商业--倾听新的声音</span>
+      <a class="more" href="/">更多</a>
+    </p>
+  </div>
+  <div class="panel-2">
+    <div class="news">
+      <div class="news-left">
+        <p class="title right-box">
+          <span>NEWS<br />公司新闻</span>
+        </p>
+        <div class="abstract">
+          <p class="abstract-time">
+            <span>2018</span>
+            <span>08</span>
+            <span>30</span>
+          </p>
+          <p class="abstract-title">铜川市与深圳美佳华实业有限公司举行座谈会</p>
+          <p class="abstract-content">8月30日，铜川市与深圳美佳华实业有限公司在铜川美
+              佳华商业中心项目现场举行座谈会。...</p>
         </div>
+        <a class="more-btn" href="/">更多<i class="iconfont icon-youshuangjiantou"></i></a>
       </div>
-      <div class="layui-col-sm6 layui-col-md6">
-        <div id="news-wrapper" class="layui-anim layui-anim-upbit" style="animation-duration: 1.8s;">
-          <h2>公司新闻<a>更多新闻</a></h2>
-          <ul>
-            <li>
-              <span class="time">2017/08/03</span>
-              <span>铜川市与深圳美佳华实业有限公司举行座谈会</span>
-            </li>
-            <li>
-              <span class="time">2017/06/30</span>
-              <span>美佳华商业——倾听新的声音</span>
-            </li>
-            <li>
-              <span class="time">2018/08/03</span>
-              <span>商业地产企业在积极谋求转型</span>
-            </li>
-            <li>
-              <span class="time">2017/08/03</span>
-              <span>房地产作为国家的货币储存的资金池</span>
-            </li>
-            <li>
-              <span class="time">2017/08/03</span>
-              <span>未来应该说是中国产业地产黄金的十年</span>
-            </li>
-            <li>
-              <span class="time">2017/08/03</span>
-              <span>这是一条新闻，这是</span>
-            </li>
-          </ul>
-        </div>
+      <div class="news-right">
+          <p class="title right-box">
+            <span>TRENDS<br />项目动态</span>
+          </p>
+          <div class="abstract">
+              <p class="abstract-time">
+                <span>2017</span>
+                <span>08/30</span>
+              </p>
+              <p class="abstract-title">同心同行，不悔青春-曲靖商管</p>
+              <p class="abstract-content">有所为，有所不为，我们不追求项目的利益最大化，而是在用心打造一个长久的商业平台，做有责任心的商业地产企业，为社会创造一定的价值。... </p>
+            </div>
+            <a class="more-btn" href="/">更多<i class="iconfont icon-youshuangjiantou"></i></a>
       </div>
     </div>
-
-    <div class="layui-row layui-col-space25">
-      <div class="layui-col-sm6 layui-col-md3">
-        <div class="main-p cy layui-anim layui-anim-upbit">
-          <p>产业</p>
-        </div>
-      </div>
-      <div class="layui-col-sm6 layui-col-md3">
-        <div class="main-p jr layui-anim layui-anim-upbit">
-          <p>金融</p>
-        </div>
-      </div>
-      <div class="layui-col-sm6 layui-col-md3">
-        <div class="main-p sy layui-anim layui-anim-upbit">
-          <p>商业</p>
-        </div>
-      </div>
-      <div class="layui-col-sm6 layui-col-md3">
-        <div class="main-p wy layui-anim layui-anim-upbit">
-          <p>物业</p>
-        </div>
-      </div>
+    <div class="item">
+      <a class="item-bk">
+        <i class="iconfont icon-chanyeyuanqu"></i>产业
+      </a>
+      <a class="item-bk">
+          <i class="iconfont icon-shangye"></i>商业
+      </a>
+      <a class="item-bk">
+          <i class="iconfont icon-16"></i>金融
+      </a>
+      <a class="item-bk">
+          <i class="iconfont icon-wuyeguanli"></i>物业
+      </a>
     </div>
   </div>
+  <img src="/web/img/home-b.png" style="margin-top:22px;" alt="">
 </div>
 <!-- <script src="https://code.createjs.com/1.0.0/preloadjs.min.js"></script> -->
 <%include ../common/include_footer.html%>
