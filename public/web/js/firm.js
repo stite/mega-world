@@ -25,6 +25,16 @@ layui.define(['jquery', 'element', 'carousel', 'laypage'], function(exports){
   });
 
   carousel.render({
+    elem: '#news-row'
+    ,width: '528px'
+    ,height: '20px'
+    ,arrow: 'none'
+    ,indicator: 'none'
+    ,interval: '5000'
+    ,anim:'updown'
+  });
+
+  carousel.render({
     elem: '#project'
     ,width: '100%'
     ,height: '100%'

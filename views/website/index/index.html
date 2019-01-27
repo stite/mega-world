@@ -1,12 +1,24 @@
 <%include ../common/include_header.html%>
 <style>
-  .main{
+  .main {
     width: 1180px;
-    margin:0 auto;
+    margin: 0 auto;
   }
+
+  .layui-carousel,
+  .layui-carousel>[carousel-item]>* {
+    background-color: #fff;
+  }
+
+  #news-row {
+    position: absolute;
+    top: 14px;
+    left: 155px;
+  }
+
   .index-banner {
-    display: flex;
-    justify-content: center;
+    height: 572px;
+    text-align: center;
   }
 
   /* 右边红块 */
@@ -27,6 +39,12 @@
 
   /* 通知部分 */
   .notice {
+    position: relative;
+  }
+
+  .notice-border {
+    position: relative;
+    top: 47px;
     border-bottom: 1px solid #f2a4a4;
   }
 
@@ -57,143 +75,428 @@
   }
 
   /* 模块2 */
-  .panel-2{
+  .panel-2 {
     position: relative;
     width: 920px;
     padding-top: 34px;
     height: 240px;
     margin: 0 auto;
   }
-  .panel-2 .news{
+
+  .panel-2 .news {
     position: relative;
     height: 218px;
     width: 628px;
   }
-  .panel-2 .item{
+
+  .panel-2 .item {
     position: absolute;
     right: 0;
-    top:34px;
+    top: 34px;
     width: 257px;
     height: 240px;
   }
-  .item .item-bk{
+
+  .item .item-bk {
     display: inline-block;
-    width: 124px;
-    height: 116px;
+    width: 122px;
+    height: 114px;
     background-color: #e02627;
     text-align: center;
-    color:#fff;
+    color: #fff;
     font-size: 18px;
+    border: 1px solid #e02627;
+    cursor: pointer;
   }
+
+  .item .item-bk:hover {
+    color: #e02627;
+    background-color: #fff;
+  }
+
+  .item .item-bk:hover .iconfont {
+    color: #e02627;
+  }
+
   .item .item-bk:nth-of-type(2) {
     position: absolute;
     right: 0;
-    top:0;
+    top: 0;
   }
+
   .item .item-bk:nth-of-type(3) {
     position: absolute;
     left: 0;
-    bottom:0;
+    bottom: 0;
   }
+
   .item .item-bk:nth-of-type(4) {
     position: absolute;
     right: 0;
-    bottom:0;
+    bottom: 0;
   }
-  .panel-2 .item .iconfont{
+
+  .panel-2 .item .iconfont {
     display: block;
     color: #fff;
     font-size: 48px;
-    margin-bottom: -10px;
-    margin-top: 10px;
+    margin-top: 20px;
   }
 
-  .news-left{
-    position:relative;
+  .news-left {
+    position: relative;
     width: 315px;
     height: 218px;
   }
-  .news-right{
+
+  .news-right {
     position: absolute;
-    right:0;
-    top:0;
+    right: 0;
+    top: 0;
     width: 290px;
     height: 218px;
   }
-  .news .title{
+
+  .news .title {
     color: #333;
     font-size: 18px;
+    line-height: 23px;
     font-weight: bold;
     border-bottom: 1px solid #e02627;
     margin-bottom: 14px;
   }
-  .abstract{
+
+  .abstract {
     position: relative;
   }
+
   .abstract-time p {
     font-size: 14px;
     color: #333;
   }
+
   .abstract-title {
     font-weight: bold;
     line-height: 22px;
   }
-  .abstract-content{
+
+  .abstract-content {
     text-indent: 25px;
     color: #858585;
     font-size: 12px;
     line-height: 20px;
   }
-  .abstract-time span{
+
+  .abstract-time span {
     background-color: #e02627;
     color: #fff;
     line-height: 100%;
   }
-  .news-right .abstract-time{
+
+  .news-right .abstract-time {
     width: 40px;
-    position:absolute;
-    left:0;
-    top:0;
+    position: absolute;
+    left: 0;
+    top: 0;
   }
+
+  .news-right .abstract-time span {
+    display: inline-block;
+    width: 40px;
+    text-align: center;
+  }
+
   .news-right .abstract-title,
-  .news-right .abstract-content{
-    margin-left: 40px;
+  .news-right .abstract-content {
+    margin-left: 50px;
   }
+
+  .more-btn:hover {
+    background-color: #e02627;
+    color: #fff;
+  }
+
   .more-btn {
     position: absolute;
-    bottom:0;
-    right:0;
+    bottom: 0;
+    right: 0;
     width: 65px;
-    height:28px;
-    line-height:28px;
+    height: 28px;
+    line-height: 28px;
     border: 1px solid #e02627;
     color: #333;
     font-size: 12px;
     text-align: center;
   }
-  .more-btn .iconfont{
+
+  .more-btn .iconfont {
     font-size: 12px;
   }
+
+  .layui-carousel-ind ul,
+  .layui-carousel-ind ul:hover {
+    background-color: transparent;
+  }
+
+  .layui-carousel-ind li {
+    width: 17px;
+    height: 2px;
+    border-radius: 0;
+    background-color: transparent;
+    border: 1px solid #e02627;
+  }
+
+  .layui-carousel-ind li.layui-this {
+    background-color: #e02627;
+  }
+
+  .g-wrap {
+    position: relative;
+    margin: 0 auto;
+    width: 1180px;
+    height: 100%;
+    overflow: hidden;
+  }
+
+  /* 滑块 start */
+  #subjects {
+    height: 165px;
+    margin-top: 22px;
+  }
+
+  #subjects .g-wrap a {
+    position: absolute;
+    top: 0;
+    left: 100%;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    -webkit-opacity: 1;
+    opacity: 1;
+    display: block\9;
+    -webkit-transition: left 300ms, -webkit-opacity 700ms;
+    transition: left 300ms, opacity 700ms;
+  }
+
+  #subjects .g-wrap .item-1 {
+    z-index: 1;
+  }
+
+  #subjects .g-wrap .item-2 {
+    z-index: 2;
+  }
+
+  #subjects .g-wrap .item-3 {
+    z-index: 3;
+  }
+
+  #subjects .g-wrap .item-4 {
+    z-index: 4;
+  }
+
+  #subjects .g-wrap .item-5 {
+    z-index: 5;
+  }
+
+  #subjects .g-wrap a span {
+    position: absolute;
+    background: no-repeat 0 0;
+  }
+
+  /* 逐个出现 */
+  #subjects .ready .item-2 {
+    transition-delay: 150ms;
+    -webkit-transition-delay: 150ms;
+    -ms-transition-delay: 150ms;
+    -moz-transition-delay: 150ms;
+  }
+
+  #subjects .ready .item-3 {
+    transition-delay: 150ms;
+    -webkit-transition-delay: 300ms;
+    -ms-transition-delay: 300ms;
+    -moz-transition-delay: 300ms;
+  }
+
+  #subjects .ready .item-4 {
+    transition-delay: 150ms;
+    -webkit-transition-delay: 450ms;
+    -ms-transition-delay: 450ms;
+    -moz-transition-delay: 450ms;
+  }
+
+  #subjects .ready .item-5 {
+    transition-delay: 600ms;
+    -webkit-transition-delay: 600ms;
+    -ms-transition-delay: 600ms;
+    -moz-transition-delay: 600ms;
+  }
+
+  /* 没有指向 */
+  #subjects .state-0 .item-1 {
+    left: 0;
+  }
+
+  #subjects .state-0 .item-2 {
+    left: 240px;
+  }
+
+  #subjects .state-0 .item-3 {
+    left: 470px;
+  }
+
+  #subjects .state-0 .item-4 {
+    left: 720px;
+  }
+  #subjects .state-0 .item-5 {
+    left: 950px;
+  }
+
+  /* 指向第一个 */
+  #subjects .state-1 .item-1 {
+    left: 0;
+  }
+
+  #subjects .state-1 .item-2 {
+    left: 394px;
+  }
+
+  #subjects .state-1 .item-3 {
+    left: 558px;
+  }
+
+  #subjects .state-1 .item-4 {
+    left: 754px;
+  }
+
+  #subjects .state-1 .item-5 {
+    left: 945px;
+  }
+
+  #subjects .state-1 .item-1 .p2 {
+    -webkit-opacity: 1;
+    opacity: 1;
+    display: block\9;
+  }
+
+  /* 指向第二个 */
+  #subjects .state-2 .item-1 {
+    left: 0;
+  }
+
+  #subjects .state-2 .item-2 {
+    left: 168px;
+  }
+
+  #subjects .state-2 .item-3 {
+    left: 633px;
+  }
+
+  #subjects .state-2 .item-4 {
+    left: 828px;
+  }
+  #subjects .state-2 .item-5 {
+    left: 999px;
+  }
+
+  /* 指向第三个 */
+  #subjects .state-3 .item-1 {
+    left: 0;
+  }
+
+  #subjects .state-3 .item-2 {
+    left: 212px;
+  }
+
+  #subjects .state-3 .item-3 {
+    left: 425px;
+  }
+
+  #subjects .state-3 .item-4 {
+    left: 740px;
+  }
+  #subjects .state-3 .item-5 {
+    left: 999px;
+  }
+
+  /* 指向第四个 */
+  #subjects .state-4 .item-1 {
+    left: 0;
+  }
+
+  #subjects .state-4 .item-2 {
+    left: 168px;
+  }
+
+  #subjects .state-4 .item-3 {
+    left: 425px;
+  }
+
+  #subjects .state-4 .item-4 {
+    left: 637px;
+  }
+
+  #subjects .state-4 .item-5 {
+    left: 958px;
+  }
+
+  /* 指向第五个 */
+  #subjects .state-5 .item-1 {
+    left: 0;
+  }
+
+  #subjects .state-5 .item-2 {
+    left: 168px;
+  }
+
+  #subjects .state-5 .item-3 {
+    left: 330px;
+  }
+
+  #subjects .state-5 .item-4 {
+    left: 527px;
+  }
+  #subjects .state-5 .item-5 {
+    left: 707px;
+  }
+
+  /* 滑块 end */
 </style>
 
 
 
 <!-- banner部分 -->
 <div class="index-banner">
-  <img src="/web/img/home/banner2_01.jpg" class="animated flipInY" height="572" alt="">
-  <img src="/web/img/home/banner2_02.jpg" class="animated flipInY" height="572" alt="">
-  <img src="/web/img/home/banner2_03.jpg" class="animated flipInY" height="572" alt="">
-  <img src="/web/img/home/banner2_04.jpg" class="animated flipInY" height="572" alt="">
+  <div class="layui-carousel" id="banner">
+    <div carousel-item="">
+      <div><img src="/web/img//banner2.jpg" height="572" alt=""></div>
+      <div><img src="/web/img/banner1.jpg" height="572" alt=""></div>
+      <div><img src="/web/img/banner2.jpg" height="572" alt=""></div>
+      <div><img src="/web/img/banner1.jpg" height="572" alt=""></div>
+      <div><img src="/web/img/banner2.jpg" height="572" alt=""></div>
+      <div><img src="/web/img/banner1.jpg" height="572" alt=""></div>
+    </div>
+  </div>
 </div>
 </div>
+<div class="notice-border"></div>
 <!-- main部分 -->
 <div class="main">
   <div class="notice">
     <p class="notice-p right-box">
       <span class="iconfont icon-tongzhi"></span>
-      <span>美佳华商业--倾听新的声音</span>
       <a class="more" href="/">更多</a>
     </p>
+    <div class="layui-carousel" id="news-row">
+      <div carousel-item="">
+        <div>美佳华商业--倾听新的声音</div>
+        <div>美佳华商业--倾听新的声音112233</div>
+        <div>美佳华商业--倾听新的声音556677</div>
+        <div>美佳华商业-werf倾听新的声音</div>
+        <div>美sdfds佳华商业--倾听新的声音</div>
+        <div>美佳sdfd华商业--倾听新的声音</div>
+      </div>
+    </div>
   </div>
   <div class="panel-2">
     <div class="news">
@@ -209,23 +512,23 @@
           </p>
           <p class="abstract-title">铜川市与深圳美佳华实业有限公司举行座谈会</p>
           <p class="abstract-content">8月30日，铜川市与深圳美佳华实业有限公司在铜川美
-              佳华商业中心项目现场举行座谈会。...</p>
+            佳华商业中心项目现场举行座谈会。...</p>
         </div>
         <a class="more-btn" href="/">更多<i class="iconfont icon-youshuangjiantou"></i></a>
       </div>
       <div class="news-right">
-          <p class="title right-box">
-            <span>TRENDS<br />项目动态</span>
+        <p class="title right-box">
+          <span>TRENDS<br />项目动态</span>
+        </p>
+        <div class="abstract">
+          <p class="abstract-time">
+            <span>2017</span>
+            <span>08/30</span>
           </p>
-          <div class="abstract">
-              <p class="abstract-time">
-                <span>2017</span>
-                <span>08/30</span>
-              </p>
-              <p class="abstract-title">同心同行，不悔青春-曲靖商管</p>
-              <p class="abstract-content">有所为，有所不为，我们不追求项目的利益最大化，而是在用心打造一个长久的商业平台，做有责任心的商业地产企业，为社会创造一定的价值。... </p>
-            </div>
-            <a class="more-btn" href="/">更多<i class="iconfont icon-youshuangjiantou"></i></a>
+          <p class="abstract-title">同心同行，不悔青春-曲靖商管</p>
+          <p class="abstract-content">有所为，有所不为，我们不追求项目的利益最大化，而是在用心打造一个长久的商业平台，做有责任心的商业地产企业，为社会创造一定的价值。... </p>
+        </div>
+        <a class="more-btn" href="/">更多<i class="iconfont icon-youshuangjiantou"></i></a>
       </div>
     </div>
     <div class="item">
@@ -233,17 +536,116 @@
         <i class="iconfont icon-chanyeyuanqu"></i>产业
       </a>
       <a class="item-bk">
-          <i class="iconfont icon-shangye"></i>商业
+        <i class="iconfont icon-shangye"></i>商业
       </a>
       <a class="item-bk">
-          <i class="iconfont icon-16"></i>金融
+        <i class="iconfont icon-16"></i>金融
       </a>
       <a class="item-bk">
-          <i class="iconfont icon-wuyeguanli"></i>物业
+        <i class="iconfont icon-wuyeguanli"></i>物业
       </a>
     </div>
   </div>
-  <img src="/web/img/home-b.png" style="margin-top:22px;" alt="">
+  <div id="subjects">
+    <div class="g-wrap ready trans">
+      <a class="item-1" target="_blank">
+        <span class="p1">
+          <img src="/web/img/home/xm_5.jpg" alt=""></span>
+        <span class="p2" style="left: 350px; top: 21px;"></span>
+      </a>
+      <a class="item-2" target="_blank">
+        <span class="p1">
+          <img src="/web/img/home/xm_4.jpg" alt="">
+        </span>
+        <span class="p2">
+          <img src="/upload/img/2015-04-30/6ead2c8e-f430-4407-b7ac-63208aca4d7a.jpg" alt="">
+        </span>
+      </a>
+      <a class="item-3" target="_blank">
+        <span class="p1">
+          <img src="/web/img/home/xm_3.jpg" alt=""></span>
+      </a>
+      <a class="item-4" target="_blank">
+        <span class="p1">
+          <img src="/web/img/home/xm_2.jpg" alt=""></span>
+      </a>
+      <a class="item-5" target="_blank">
+          <span class="p1">
+            <img src="/web/img/home/xm_1.jpg" alt=""></span>
+        </a>
+    </div>
+  </div>
 </div>
 <!-- <script src="https://code.createjs.com/1.0.0/preloadjs.min.js"></script> -->
+<script>
+  // 滑块控制
+  (function () {
+    var sup = document.getElementById('subjects').getElementsByTagName('div')[0],
+      items = sup.getElementsByTagName('a'),
+      len = items.length;
+    // base  = 70,
+    // width_s = parseInt(getComputedStyle(sup).width);
+    // width_i = width_s / len,
+    // left    = null,
+    // style   = null,
+    // lefts = [],  // 普通模式下各元素的位置
+    // styles  = [];
+
+    window.onload = function () { sup.className = "g-wrap ready state-0"; }
+
+    // 存储常用变量, 绑定事件
+    for (var i = 0, elem = null; i < len; i++) {
+      elem = items[i];
+      // styles.push(elem.style);
+      // lefts.push(width_i*i);
+      elem.setAttribute('idx', i + 1);
+      bind(elem, 'mouseover', hoverOn);
+    }
+    // 元素逐个出现
+    initItems(0, len, 200);
+
+    // 事件绑定函数
+    bind(sup, 'mouseout', function () {
+      // for (i=0; i<len; i++) {
+      // styles[i].left = lefts[i] + 'px';
+      // }
+      sup.className = "g-wrap state-0";
+    });
+
+    // 控制元素逐个出现
+    function initItems(idx, len, delay) {
+      if (idx === len) return;
+      // style = styles[idx];
+      // style.left = lefts[idx] + "px";
+      // style.opacity = "1";
+      setTimeout(function () { initItems(idx + 1, len, delay); }, delay);
+    }
+
+    // 函数绑定
+    function bind(elem, evn, func) {
+      if ('addEventListener' in elem) {
+        bind = function (elem, evn, func) { elem.addEventListener(evn, func, false); }
+      } else {
+        bind = function (elem, evn, func) { elem['on' + evn] = func; }
+      }
+      bind(elem, evn, func);
+    }
+
+    //元素 mouseover 事件处理
+    var i = 0, flag = false;
+    function hoverOn() {
+      // for(i=0, flag=false; i<len; i++) {
+      //     temp = items[i];
+      //     style = styles[i];
+      //     if (temp === this) {
+      //         flag = true;
+      //         style.left = lefts[i] - (i*base) + "px";
+      //     } else {
+      //         style.left = lefts[i] + (flag?(len-i)*base:-(i*base)) + "px";
+      //     }
+      // }
+      sup.className = "g-wrap state-" + this.getAttribute('idx');
+    }
+  }());
+</script>
 <%include ../common/include_footer.html%>
