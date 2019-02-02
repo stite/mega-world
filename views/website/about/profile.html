@@ -20,22 +20,66 @@
     padding: 0 10px;
   }
 
-  .mega-this a {
-    color: #e53333;
-  }
-
   .mega-this {
     border-bottom: 2px solid #e53333;
   }
-  .layui-breadcrumb{
-    float:right;
+
+  .layui-breadcrumb {
+    float: right;
     margin-bottom: 44px;
   }
-  .profile-main-p{
-    font-size: 1.5em;
+
+  .main {
+    position: relative;
+    margin-top: 24px;
+    height: 453px;
   }
-  .profile-main-img{
-    width: 88%;
+
+  .mian p {
+    font-size: 13px;
+  }
+
+  .red-border {
+    position: absolute;
+    top: 37px;
+    left: 73px;
+    height: 340px;
+    width: 510px;
+    border: 1px solid #e02627;
+  }
+
+  .profile-img {
+    height: 342px;
+    width: 537px;
+    position: absolute;
+    left: 92px;
+    top: 56px;
+  }
+
+  .profile-text {
+    position: absolute;
+    right: 65px;
+    top: 86px;
+    height: 244px;
+    width: 502px;
+    padding:17px 19px;
+
+    background: #fff;
+    box-shadow: 10px 10px 15px #ececec;
+  }
+  .text-title{
+    font-size: 14px;
+    line-height: 20px;
+    width: 65px;
+    border-bottom: 2px solid #e53333;
+    margin-bottom: 6px;
+  }
+  .text-content p {
+    font-size: 13px;
+    line-height: 20px;
+  }
+  .text-content p.first{
+    text-indent: 26px;
   }
 </style>
 <div class="mega-banner"></div>
@@ -48,17 +92,30 @@
 
 <div class="layui-container">
   <span class="layui-breadcrumb" lay-separator=">">
-    <a href="/">首页</a>
+    <a href="/"><span class="iconfont icon-shouye"></span>首页</a>
     <a href="/about">关于美佳华</a>
     <a><cite>公司简介</cite></a>
   </span>
-  <div class="layui-row">
-    <div class="layui-col-md6">
-      <img class="layui-anim animated fadeInLeft" src="/web/img/profile-main.jpg" alt="" style="width:100%;">
+</div>
+<div class="layui-container main">
+  <div class="red-border"></div>
+  <img class="profile-img" src="/web/img/profile-main.jpg">
+  <div class="profile-text">
+    <p class="text-title">公司简介</p>
+    <div class="text-content">
+        <p class="first">深圳美佳华实业有限公司成立于2006年，注册资金2亿元，历经十余载不断地开拓</p>
+        <p>经营，旗下现有地产、商业、产业、金融、物业五大板块，并于2016年挂牌成立深圳美</p>
+        <p>佳华实业集团。目前，美佳华集团业务具体涉及商业地产开发、商业运营、城市更新、</p>
+        <p>产业地产、基金管理、物业管理、工业互联网等多元领域，业务遍布于深圳、惠州、东</p>
+        <p>莞、玉溪、曲靖、荆州、萍乡、铜川等8个省市，旗下设有二十余家全资子公司，为所在</p>
+        <p>地区的经济发展、就业及税收做出了突出贡献。</p>
+        <p class="first">未来，美佳华集团将充分发挥大湾区之区位优势，紧跟国家发展战略及时代发展步</p>
+        <p>伐，联合平安不动产、思贝克集团等相关行业单位，积极响应政府号召，着力搭建资源</p>
+        <p>整合平台，全力参与城市更新项目，持续优化产品服务，为大湾区的城市建设、经济发</p>
+        <p>展及人民的安居乐业尽一份绵薄之力。</p>
+        <p class="first">美佳华集团，致力于成为卓越的不动产投资运营商。</p>
     </div>
-    <div class="layui-col-md6" style="text-align: center">
-      <p class="profile-main-p animated fadeInRight" style="color: #ff9d12; padding: 20px 0;">公司简介</p>
-      <img class="profile-main-img animated fadeInRight" src="/web/img/profile-p1.png" alt="">
-    </div>
+    
+  </div>
 </div>
 <%include ../common/include_footer.html%>

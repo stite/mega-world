@@ -1,22 +1,29 @@
- <!-- footer部分 -->
- <style>
- .footer-right{
-   text-align: right;
- }
- .footer-right .icon-dizhi {
-   position: absolute;
-   left: -50px;
-   font-size: 38px;
- }
- </style>
- <div class="footer">
+<!-- footer部分 -->
+<style>
+  .footer-wrapper{
+    background: #fff;
+    margin-top: 12px;
+  }
+  .footer-right {
+    text-align: right;
+  }
+
+  .footer-right .icon-dizhi {
+    position: absolute;
+    left: -50px;
+    top: -2px;
+    font-size: 38px;
+  }
+</style>
+<div class="footer-wrapper">
+  <div class="footer">
     <span class="footer-left">深圳美佳华实业有限公司版权所有 粤ICP备05055114号-1</span>
     <span class="footer-right">
       <span class="iconfont icon-dizhi"></span>
-        地址：深圳市福田区竹子林紫竹七道中国经贸大厦11楼<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;电话：0755-82537711&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;传真：0755-82537722
+      地址：深圳市福田区竹子林紫竹七道中国经贸大厦11楼<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;电话：0755-82537711&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;传真：0755-82537722
     </span>
-</div>
   </div>
+</div>
 <script src="/web/layui/layui.js"></script>
 <!--[if lt IE 9]>
   <script src="https://cdn.staticfile.org/html5shiv/r29/html5.min.js"></script>
@@ -24,8 +31,9 @@
 <![endif]-->
 <script>
   layui.config({
-    base: '/web/js/' 
+    base: '/web/js/'
   }).use('firm'); 
 </script>
 </body>
+
 </html>

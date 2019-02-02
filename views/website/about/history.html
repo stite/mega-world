@@ -1,6 +1,9 @@
 <%include ../common/include_header.html%>
 <style>
-   .wow { visibility: hidden; }
+  .wow {
+    visibility: hidden;
+  }
+
   .mega-banner {
     height: 186px;
     background: url(/web/img/banner2.jpg) no-repeat center -88px;
@@ -18,27 +21,33 @@
     top: 2px;
     font-size: 14px;
     line-height: 2.366;
-    padding:0 10px;
+    padding: 0 10px;
   }
-  .mega-this a{
+
+  .mega-this a {
     color: #e53333;
   }
-  .mega-this{
+
+  .mega-this {
     border-bottom: 2px solid #e53333;
   }
-  .layui-breadcrumb{
-    float:right;
+
+  .layui-breadcrumb {
+    float: right;
     margin-bottom: 44px;
   }
-  .history-l{
+
+  .history-l {
     text-align: right;
     border-right: 1px solid #f08681;
   }
-  .history-l img{
+
+  .history-l img {
     margin-right: -5px;
-    margin-bottom:153px;
+    margin-bottom: 153px;
   }
-  .history-r img{
+
+  .history-r img {
     display: block;
     margin-left: -5px;
     margin-bottom: 53px;
@@ -47,54 +56,62 @@
 <script src="/web/lib/wow.min2.js"></script>
 <div class="mega-banner"></div>
 <ul class="mega-nav">
-    <li class="mega-nav-item"><a href="/profile">公司简介</a></li>
-    <li class="mega-nav-item"><a href="/culture">企业文化</a></li>
-    <li class="mega-nav-item mega-this"><a href="/history">发展历程</a></li>
-    <li class="mega-nav-item"><a href="/honor">公司荣誉</a></li>
+  <li class="mega-nav-item"><a href="/profile">公司简介</a></li>
+  <li class="mega-nav-item"><a href="/culture">企业文化</a></li>
+  <li class="mega-nav-item mega-this"><a href="/history">发展历程</a></li>
+  <li class="mega-nav-item"><a href="/honor">公司荣誉</a></li>
 </ul>
 <div class="layui-container">
-    <span class="layui-breadcrumb" lay-separator=">">
-        <a href="/">首页</a>
-        <a href="/about">关于美佳华</a>
-        <a><cite>发展历程</cite></a>
-      </span>
-      <div class="layui-row">
-        <div class="layui-col-md7 history-l">
-          <div>
-            <img class="wow layui-anim animated fadeInLeft" style="margin-right: -20px;" src="/web/img/history/pic1.jpg">
-            <img class="wow layui-anim animated fadeInLeft" src="/web/img/history/line.png">
-          </div>
-          <div>
-            <img class="wow layui-anim animated fadeInLeft" style="margin-right: -20px;" src="/web/img/history/pic2.jpg">
-            <img class="wow layui-anim animated fadeInLeft" src="/web/img/history/line.png">
-          </div>
-          <div>
-            <img class="wow layui-anim animated fadeInLeft" style="margin-right: -20px;" src="/web/img/history/pic3.jpg">
-            <img class="wow layui-anim animated fadeInLeft" src="/web/img/history/line.png">
-          </div>
-          <div>
-            <img class="wow layui-anim animated fadeInLeft" style="margin-right: -20px; margin-bottom: 0" src="/web/img/history/pic4.jpg">
-            <img class="wow layui-anim animated fadeInLeft" src="/web/img/history/line.png">
-          </div>
-        </div>
-        <div class="layui-col-md5 history-r" style="text-align: center">
-          <img class="wow layui-anim animated fadeInRight" data-wow-delay=".5s" data-wow-duration="1s" style="margin-top:-5px;" src="/web/img/history/2017.png">
-          <img class="wow layui-anim animated fadeInRight" data-wow-delay=".5s" data-wow-duration="1s" src="/web/img/history/2016.png">
-          <img class="wow layui-anim animated fadeInRight" data-wow-delay=".5s" data-wow-duration="1s" src="/web/img/history/2015.png">
-          <img class="wow layui-anim animated fadeInRight" data-wow-delay=".5s" data-wow-duration="1s" src="/web/img/history/2014.png">
-          <img class="wow layui-anim animated fadeInRight" data-wow-delay=".5s" data-wow-duration="1s" src="/web/img/history/2013.png">
-          <img class="wow layui-anim animated fadeInRight" data-wow-delay=".5s" data-wow-duration="1s" src="/web/img/history/2012.png">
-          <img class="wow layui-anim animated fadeInRight" data-wow-delay=".5s" data-wow-duration="1s" style="padding-top: 10px;" src="/web/img/history/2011.png">
-          <img class="wow layui-anim animated fadeInRight" data-wow-delay=".5s" data-wow-duration="1s" style="padding-top: 25px;" src="/web/img/history/2010.png">
-          <img class="wow layui-anim animated fadeInRight" data-wow-delay=".5s" data-wow-duration="1s" style="padding-top: 10px;" src="/web/img/history/2009.png">
-          <img class="wow layui-anim animated fadeInRight" data-wow-delay=".5s" data-wow-duration="1s" style="padding-top: 45px;" src="/web/img/history/2008.png">
-          <img class="wow layui-anim animated fadeInRight" data-wow-delay=".5s" data-wow-duration="1s" style="padding-top: 55px;" src="/web/img/history/2007.png">
-          <img class="wow layui-anim animated fadeInRight" data-wow-delay=".5s" data-wow-duration="1s" style="padding-top: 45px;" data-wow-offset="100" src="/web/img/history/2006.png">
-        </div>
+  <span class="layui-breadcrumb" lay-separator=">">
+    <a href="/"><span class="iconfont icon-shouye"></span>首页</a>
+    <a href="/about">关于美佳华</a>
+    <a><cite>发展历程</cite></a>
+  </span>
+  <div class="layui-row">
+    <div class="layui-col-md7 history-l">
+      <div>
+        <img class="wow layui-anim animated fadeInLeft" style="margin-right: -20px;" src="/web/img/history/pic1.jpg">
+        <img class="wow layui-anim animated fadeInLeft" src="/web/img/history/line.png">
+      </div>
+      <div>
+        <img class="wow layui-anim animated fadeInLeft" style="margin-right: -20px;" src="/web/img/history/pic2.jpg">
+        <img class="wow layui-anim animated fadeInLeft" src="/web/img/history/line.png">
+      </div>
+      <div>
+        <img class="wow layui-anim animated fadeInLeft" style="margin-right: -20px;" src="/web/img/history/pic3.jpg">
+        <img class="wow layui-anim animated fadeInLeft" src="/web/img/history/line.png">
+      </div>
+      <div>
+        <img class="wow layui-anim animated fadeInLeft" style="margin-right: -20px; margin-bottom: 0" src="/web/img/history/pic4.jpg">
+        <img class="wow layui-anim animated fadeInLeft" src="/web/img/history/line.png">
+      </div>
+    </div>
+    <div class="layui-col-md5 history-r" style="text-align: center">
+      <img class="wow layui-anim animated fadeInRight" data-wow-delay=".5s" data-wow-duration="1s" style="margin-top:-5px;"
+        src="/web/img/history/2017.png">
+      <img class="wow layui-anim animated fadeInRight" data-wow-delay=".5s" data-wow-duration="1s" src="/web/img/history/2016.png">
+      <img class="wow layui-anim animated fadeInRight" data-wow-delay=".5s" data-wow-duration="1s" src="/web/img/history/2015.png">
+      <img class="wow layui-anim animated fadeInRight" data-wow-delay=".5s" data-wow-duration="1s" src="/web/img/history/2014.png">
+      <img class="wow layui-anim animated fadeInRight" data-wow-delay=".5s" data-wow-duration="1s" src="/web/img/history/2013.png">
+      <img class="wow layui-anim animated fadeInRight" data-wow-delay=".5s" data-wow-duration="1s" src="/web/img/history/2012.png">
+      <img class="wow layui-anim animated fadeInRight" data-wow-delay=".5s" data-wow-duration="1s" style="padding-top: 10px;"
+        src="/web/img/history/2011.png">
+      <img class="wow layui-anim animated fadeInRight" data-wow-delay=".5s" data-wow-duration="1s" style="padding-top: 25px;"
+        src="/web/img/history/2010.png">
+      <img class="wow layui-anim animated fadeInRight" data-wow-delay=".5s" data-wow-duration="1s" style="padding-top: 10px;"
+        src="/web/img/history/2009.png">
+      <img class="wow layui-anim animated fadeInRight" data-wow-delay=".5s" data-wow-duration="1s" style="padding-top: 45px;"
+        src="/web/img/history/2008.png">
+      <img class="wow layui-anim animated fadeInRight" data-wow-delay=".5s" data-wow-duration="1s" style="padding-top: 55px;"
+        src="/web/img/history/2007.png">
+      <img class="wow layui-anim animated fadeInRight" data-wow-delay=".5s" data-wow-duration="1s" style="padding-top: 45px;"
+        data-wow-offset="100" src="/web/img/history/2006.png">
+    </div>
+  </div>
 </div>
 <script>
-    if (!(/msie [6|7|8|9]/i.test(navigator.userAgent))){
-        new WOW().init();
-    };
-  </script>
+  if (!(/msie [6|7|8|9]/i.test(navigator.userAgent))) {
+    new WOW().init();
+  };
+</script>
 <%include ../common/include_footer.html%>

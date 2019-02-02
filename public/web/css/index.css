@@ -7,7 +7,12 @@
  */
 
 .layui-nav{display:none;}
-
+.layui-container{
+  width: 1180px;
+}
+body{
+  background: #f7f7f7;
+}
 
 /** 首页 */
 
