@@ -50,7 +50,7 @@
 .layui-nav-child:after{
   content: '';
   position: absolute;
-  background-color: #feb52b;
+  background-color: #3333;
   opacity: 0.659;
   height: 40px;
   top: 0;
@@ -66,7 +66,8 @@
     width: 0px;
     border-width: 0 5px 10px;
     border-style: solid;
-    border-color: transparent transparent #feb52b;
+    border-color: transparent transparent #333333;
+    opacity: .15;
     top: -10px;
     left: 20px;
     z-index: -1;

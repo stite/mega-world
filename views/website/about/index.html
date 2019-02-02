@@ -1,13 +1,8 @@
 <%include ../common/include_header.html%>
 <style>
-  .banner.about {
-    position: absolute;
-    top:0;
-    width: 100%;
-    height: 572px;
-    opacity: 0.4;
-    background: url(/web/img/banner2.jpg) no-repeat center top;
-    background-size: cover;
+  .mega-banner {
+    height: 186px;
+    background: url(/web/img/banner2.jpg) no-repeat center -88px;
   }
 
   .layui-container.about {
@@ -16,14 +11,9 @@
     text-align: center;
   }
 
-  .about-title {
-    text-align: center;
-    font-size: 24px;
-    padding-bottom: 20px;
-    color: #74666a;
-  }
-
   .go-home {
+    position: relative;
+    top:110px;
     font-size: 14px;
     color: #faab16;
     font-weight: bold;
@@ -46,7 +36,7 @@
   .culture,
   .history,
   .honor {
-    height: 603px;
+    height: 391px;
     width: 280px;
     margin: 0 auto;
     cursor: pointer;
@@ -58,7 +48,7 @@
   .honor p {
     font-size: 20px;
     color: #fff;
-    padding-top: 265px;
+    padding-top: 172px;
   }
 
   .profile:hover .more,
@@ -88,9 +78,8 @@
     animation-duration: 2.4s;
   }
 </style>
-<div class="banner about"></div>
+<div class="mega-banner"></div>
 <div class="layui-container about">
-  <h2 class="about-title">关于美佳华</h2>
   <div class="layui-row">
     <div class="layui-col-xs12 layui-col-md3">
       <div class="profile layui-anim layui-anim-upbit">
@@ -118,6 +107,6 @@
     </div>
   </div>
 
-  <a href="/" class="go-home">返回首页</a>
+  <a href="/" class="go-home">返回首页<span class="iconfont icon-shouye" style="padding-left: 10px;"></span></a>
 </div>
 <%include ../common/include_footer.html%>
