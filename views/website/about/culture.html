@@ -33,8 +33,74 @@
     margin-bottom: 44px;
   }
 
-  .layui-col-md6 {
-    overflow: hidden;
+  .main {
+    position: relative;
+    height: 510px;
+    margin-top: 34px;
+    padding-bottom: 58px;
+  }
+
+  .box-1 {
+    position: relative;
+    height: 255px;
+    width: 600px;
+    background: url(/web/img/culture/culture-1.jpg) no-repeat center center;
+  }
+
+  .box-1 p {
+    color: #fff;
+    font-size: 14px;
+    padding-top: 27px;
+    padding-left: 27px;
+  }
+
+  .box-4 p {
+    color: #fff;
+    font-size: 14px;
+    text-align: right;
+    padding-right: 10px;
+  }
+
+  .box-4 {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    padding-top: 20px;
+    height: 235px;
+    width: 600px;
+    background: url(/web/img/culture/culture-4.jpg) no-repeat center center;
+  }
+
+  .box-2,
+  .box-3 {
+    position: absolute;
+    width: 580px;
+    height: 255px;
+    background-color: #fff8ec;
+  }
+  .box-2 p, .box-3 p{
+    color: #666;
+    font-size: 16px;
+    line-height: 32px;
+  }
+  .box-3 p{
+    text-indent: 140px;
+  }
+  .box-2 p{
+    text-indent: 110px;
+  }
+  .box-2 {
+    right: 0;
+    top: 0;
+  }
+  .im{
+    color: #e53333!important;
+    font-size: 18px;
+  }
+
+  .box-3 {
+    left: 0;
+    bottom: 0;
   }
 </style>
 <div class="mega-banner"></div>
@@ -50,21 +116,25 @@
     <a href="/about">关于美佳华</a>
     <a><cite>企业文化</cite></a>
   </span>
-  <div class="layui-row">
-    <div class="layui-col-md6">
-      <img class="layui-anim animated flipInY" src="/web/img/culture-1.jpg" alt="" style="width: 100%">
-    </div>
-    <div class="layui-col-md6" style="text-align: left">
-      <img class="animated flipInY" src="/web/img/culture-2.png" alt="" style="width: 72%; margin-top: 15%;margin-left: 10px;">
-    </div>
-    <div class="layui-row">
-      <div class="layui-col-md6" style="text-align: right;">
-        <img class="layui-anim animated flipInY" src="/web/img/culture-3.png" alt="" style="width: 60%; margin-top: 10%; margin-right: 10px;">
-      </div>
-      <div class="layui-col-md6">
-        <img class="animated flipInY" src="/web/img/culture-4.jpg" alt="" style="width: 100%">
-      </div>
-    </div>
+</div>
+<div class="layui-container main">
+  <div class="box-1">
+    <p>致力于成为卓越的不动产投资运营商</p>
+  </div>
+  <div class="box-2">
+    <p style="margin-top: 106px;"><span class="im">战略：</span>搭建资源整合平台，持续优化产品服务，</p>
+    <p style="text-indent: 164px;">聚焦深莞惠，布局全国，多产业协同发展。</p>
+  </div>
+  <div class="box-3">
+    <p class="im" style="margin-top:62px;">价值观：融合，高效，分享</p>
+    <p>融合：资本融合，产业融合，人才融合</p>
+    <p>高效：高效决策，高效行动，高效达成</p>
+    <p>分享：分享价值，分享成就，分享未来</p>
+  </div>
+  <div class="box-4">
+    <p>有所为，有所不为</p>
+    <p>我们不追求利益的最大化，而是用心打造一个</p>
+    <p>长久的资源整合平台，为社会创造一定的价值</p>
   </div>
 </div>
 <%include ../common/include_footer.html%>
