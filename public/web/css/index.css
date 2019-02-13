@@ -9,6 +9,7 @@
 .layui-nav{display:none;}
 .layui-container{
   width: 1180px;
+  margin: 0 auto;
 }
 body{
   background: #f7f7f7;

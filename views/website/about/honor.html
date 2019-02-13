@@ -17,31 +17,184 @@
     top: 2px;
     font-size: 14px;
     line-height: 2.366;
-    padding:0 10px;
+    padding: 0 10px;
   }
-  .mega-this a{
+
+  .mega-this a {
     color: #e53333;
   }
-  .mega-this{
+
+  .mega-this {
     border-bottom: 2px solid #e53333;
   }
-  .layui-breadcrumb{
-    float:right;
+
+  .layui-breadcrumb {
+    float: right;
     margin-bottom: 44px;
+  }
+
+  .main {
+    position: relative;
+    height: 488px;
+    background: #fff8ec;
+    margin-top: 64px;
+    margin-bottom: 78px;
+    background-image: url(/web/img/honor/bg-1.jpg);
+    background-repeat: no-repeat;
+    background-position: center right;
+  }
+
+  .main h1 {
+    font-size: 24px;
+    color: rgb(82, 54, 51);
+    font-weight: bold;
+    text-transform: uppercase;
+    text-align: center;
+    padding-top: 30px;
+  }
+
+  .line-wrapper {
+    padding: 0 20px;
+    width: max-content;
+  }
+
+  .line {
+    position: relative;
+    top: 112px;
+    border-bottom: 1px solid #ffc36d;
+  }
+
+  .line-top {
+    position: relative;
+    display: inline-block;
+    height: 112px;
+    padding-right: 28px;
+    border-left: 1px solid #ffc36d;
+  }
+
+  .line-top:after {
+    position: absolute;
+    left: 0;
+    top: 0;
+    display: block;
+    content: '';
+    width: 26px;
+    border-top: 1px solid #ffc36d;
+  }
+
+  .line-top:before {
+    position: absolute;
+    left: -6px;
+    bottom: -5px;
+    display: block;
+    content: '';
+    width: 11px;
+    height: 11px;
+    border-radius: 50%;
+    background-color: #ffc36d;
+    opacity: 0.8;
+  }
+
+  .line-bottom {
+    display: inline-block;
+    position: relative;
+    height: 116px;
+    padding-right: 60px;
+    border-left: 1px solid #ffc36d;
+  }
+
+  .line-bottom:before {
+    position: absolute;
+    left: -6px;
+    top: -5px;
+    display: block;
+    content: '';
+    width: 11px;
+    height: 11px;
+    border-radius: 50%;
+    background-color: #ffc36d;
+    opacity: 0.8;
+  }
+
+  .time {
+    font-size: 20px;
+    color: #e53333;
+    text-transform: uppercase;
+    padding-left: 20px;
+    padding-top: 26px;
+    padding-bottom: 8px;
+  }
+
+  .ms {
+    font-size: 14px;
+    color: #523633;
+    padding-left: 20px;
   }
 </style>
 <div class="mega-banner"></div>
 <ul class="mega-nav">
-    <li class="mega-nav-item"><a href="/profile">公司简介</a></li>
-    <li class="mega-nav-item"><a href="/culture">企业文化</a></li>
-    <li class="mega-nav-item"><a href="/history">发展历程</a></li>
-    <li class="mega-nav-item mega-this"><a href="/honor">公司荣誉</a></li>
+  <li class="mega-nav-item"><a href="/profile">公司简介</a></li>
+  <li class="mega-nav-item"><a href="/culture">企业文化</a></li>
+  <li class="mega-nav-item"><a href="/history">发展历程</a></li>
+  <li class="mega-nav-item mega-this"><a href="/honor">公司荣誉</a></li>
 </ul>
 <div class="layui-container">
-    <span class="layui-breadcrumb" lay-separator=">">
-        <a href="/"><span class="iconfont icon-shouye"></span>首页</a>
-        <a href="/about">关于美佳华</a>
-        <a><cite>公司荣誉</cite></a>
-      </span>
+  <span class="layui-breadcrumb" lay-separator=">">
+    <a href="/"><span class="iconfont icon-shouye"></span>首页</a>
+    <a href="/about">关于美佳华</a>
+    <a><cite>公司荣誉</cite></a>
+  </span>
+</div>
+<div class="layui-container main">
+  <img style="position:absolute;" src="/web/img/honor/lefttop.png" alt="引领城市新生活方式">
+  <h1>企业荣誉</h1>
+  <div style="height: 106px;"></div>
+  <div class="line-wrapper">
+    <div class="line"></div>
+    <div class="line-top">
+      <p class="time">2017年1月</p>
+      <p class="ms">2016年福田区规模以上服务业统计先进企业</p>
+    </div>
+
+    <div class="line-top">
+      <p class="time">2016年8月</p>
+      <p class="ms">2016中国最具创新力地产企业</p>
+    </div>
+
+    <div class="line-top">
+      <p class="time">2015年9月</p>
+      <p class="ms">2015年度购物中心自营品牌奖</p>
+      <p class="ms" style="position: absolute;">中购联中国购物中心行业</p>
+    </div>
+
+    <div class="line-top">
+      <p class="time">2010年8月</p>
+      <p class="ms">2010年中国最具价值商业地产品牌</p>
+    </div>
+  </div>
+  <div class="line-wrapper">
+    <div style="display:inline-block; width: 64px;"></div>
+    <div class="line-bottom">
+      <p class="time">2016年11月</p>
+      <p class="ms">荣登2016中国商业地产TOP100榜单</p>
+    </div>
+
+    <div class="line-bottom">
+      <p class="time">2015年12月</p>
+      <p class="ms">2015年度最佳商业发展商</p>
+    </div>
+
+    <div class="line-bottom">
+      <p class="time">2012年8月</p>
+      <p class="ms">中国地产风尚大奖•2012年度中国十大风尚楼盘</p>
+      <p class="ms" style="position: absolute;">首誉项目</p>
+    </div>
+
+    <div class="line-bottom">
+        <p class="time">2010年12月</p>
+        <p class="ms">中国国际商会常务理事单位</p>
+      </div>
+  </div>
+
 </div>
 <%include ../common/include_footer.html%>
