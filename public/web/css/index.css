@@ -416,25 +416,6 @@ p.project-title{
     font-size: 1.5em;
   }
 }
-/*超大屏幕*/
-@media screen and (min-width: 1200px) {
-  .layui-container {
-    width: 1180px;
-    padding: 0;
-  }
-  .main-news .content .news-img{width: 15%;}
-  .main-news .content .news-panel{width: 65%;}
-  .main-about .tabCour .timeline li .cour-panel{padding-left: 50px;}
-  .main-about .tabCour .timeline li.odd .cour-panel{padding-left: 0; padding-right: 50px;}
-  .nav .layui-nav .layui-nav-item{display: inline-block; margin:0 12px; line-height: 44px;}
-}
-@media screen and (min-width: 1300px) {
-  .layui-container{width: 1200px; padding: 0;}
-  .main-about .tabJob .content:last-child{margin-bottom: 180px;}
-  .nav .nav-logo{position: absolute; top: 0; left: 0;}
-  .layui-col-space80{margin: -40px;}
-  .layui-col-space80>*{padding: 40px;}
-}
 
 .layui-breadcrumb span[lay-separator] {
   margin: 0;
