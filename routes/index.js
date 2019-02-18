@@ -25,7 +25,7 @@ module.exports = function (app) {
   app.get('/honor', Index.honor);
 
   //新闻中心
-  app.get('/news_index', Index.news_index);
+  app.get('/company_news', Index.company_news);
 
   //联系我们
   app.get('/contact_us', Index.contact_us);

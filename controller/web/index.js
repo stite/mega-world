@@ -46,9 +46,9 @@ exports.honor = function (req, res) {
 };
 
 // 新闻中心
-exports.news_index = function (req, res) {
+exports.company_news = function (req, res) {
     Sitebase.findOne(function (err, result) {
-        res.render('website/news/news_index', { pageName: '新闻中心', site: result });
+        res.render('website/news/company_news', { pageName: '公司新闻', site: result });
     });
 };
 
