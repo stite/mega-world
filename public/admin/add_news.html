@@ -41,9 +41,10 @@
 			<div class="layui-form-item">
 				<label class="layui-form-label">类别</label>
 				<div class="layui-input-block">
-					<input type="radio" name="category" value="0" title="公司动态" checked="">
-					<input type="radio" name="category" value="1" title="媒体报道">
-					<input type="radio" name="category" value="2" title="活动报道">
+					<input type="radio" name="category" value="0" title="公司新闻" checked="">
+					<input type="radio" name="category" value="1" title="商业动态">
+					<input type="radio" name="category" value="2" title="项目进展">
+					<input type="radio" name="category" value="3" title="行业资讯">
 				</div>
 			</div>
 
@@ -54,7 +55,12 @@
 				</div>
 			</div>
 
-
+			<div class="layui-form-item">
+					<label class="layui-form-label">摘要</label>
+					<div class="layui-input-block">
+						<input type="text" id="abstract" name="abstract"  autocomplete="off" placeholder="摘要显示在列表页面，必须填写" class="layui-input">
+					</div>
+				</div>
 
 
 			<div class="layui-form-item layui-form-text">
@@ -89,6 +95,7 @@
 				var title=$("#title").val();
 				var time=$("#time").val();
 				var from=$("#from").val();
+				var abstract = $("#abstract").val();
 				//获取选中的radio的内容
 				var category=$('input:radio:checked').val();
 				//获取多文本编辑内容
@@ -99,7 +106,7 @@
 					return;
 				}
 				/*alert("title"+title+"time"+time+"from"+from+"from"+imgurl+"content"+content);*/
-				$.post("/admin/add_news",{title:title,time:time,from:from,category:category,content:content},function(result){
+				$.post("/admin/add_news",{title:title,time:time,from:from,category:category,content:content, abstract:abstract},function(result){
 					if(result.status==="success"){
 						layer.alert('添加成功,请在新闻列表查看。', {icon: 1});
 					}else{

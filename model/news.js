@@ -9,6 +9,7 @@ var  newsschema=new mongoose.Schema({
     time:String,
     category:String,
     from:String,
+    abstract:String,
 });
 
 mongoose.model('News',newsschema);

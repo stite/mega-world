@@ -31,6 +31,7 @@ exports.add_news = function(req, res) {
     var from=req.body.from;
     var category=req.body.category;
     var content=req.body.content;
+    var abstract=req.body.abstract;
 
     var data=new News(
         {
@@ -38,7 +39,8 @@ exports.add_news = function(req, res) {
             time:time,
             from:from,
             category:category,
-            content:content
+            content:content,
+            abstract:abstract
         }
     );
     data.save(function(err){
