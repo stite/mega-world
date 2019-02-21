@@ -24,12 +24,17 @@ module.exports = function (app) {
   // 公司荣誉
   app.get('/honor', Index.honor);
 
-  //新闻中心
+  //公司新闻
   app.get('/company_news', Index.company_news);
+
+  app.get('/business_news', Index.business_news);
+
+  app.get('/project_news', Index.project_news);
+  
+  app.get('/guild_news', Index.guild_news);
 
   //联系我们
   app.get('/contact_us', Index.contact_us);
-
 
   // 项目中心
   app.get('/item_index', Index.item_index);

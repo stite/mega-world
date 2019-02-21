@@ -45,7 +45,25 @@ exports.honor = function (req, res) {
     });
 };
 
-// 新闻中心
+// 商业动态
+exports.guild_news = function (req, res) {
+    Sitebase.findOne(function (err, result) {
+        res.render('website/news/guild_news', { pageName: '行业资讯', site: result });
+    });
+};
+
+exports.project_news = function (req, res) {
+    Sitebase.findOne(function (err, result) {
+        res.render('website/news/project_news', { pageName: '项目进展', site: result });
+    });
+};
+
+exports.business_news = function (req, res) {
+    Sitebase.findOne(function (err, result) {
+        res.render('website/news/business_news', { pageName: '商业动态', site: result });
+    });
+};
+
 exports.company_news = function (req, res) {
     Sitebase.findOne(function (err, result) {
         res.render('website/news/company_news', { pageName: '公司新闻', site: result });
