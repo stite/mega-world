@@ -1,0 +1,276 @@
+.land-m-top {
+  margin-top: 25px;
+}
+.land-industry {
+  height: 442px;
+  overflow: hidden;
+}
+.land-industry img {
+  margin-top: -100px;
+}
+#land img {
+  margin-top: -100px;
+}
+.land-m-center {
+  width: 920px;
+  margin: 0 auto;
+}
+.land-m-center .layui-carousel-ind ul,
+.land-m-center .layui-carousel-ind ul:hover {
+  background-color: transparent;
+}
+.land-m-center .layui-carousel-ind li {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background-color: transparent;
+  border: 1px solid #e02627;
+}
+.land-m-center .layui-carousel-ind li.layui-this {
+  background-color: #e02627;
+}
+.land-m-center .mega-this {
+  border-bottom: 2px solid #e53333;
+}
+.m-ca {
+  width: 920px;
+  overflow: hidden;
+  margin: 0 auto;
+  position: relative;
+}
+.m-ca .m-ca-img {
+  width: 100%;
+  overflow: hidden;
+  text-align: center;
+}
+.m-ca .m-ca-img img {
+  margin-bottom: 10px;
+}
+.m-ca .ca-title {
+  font-size: 18px;
+  color: #666;
+  line-height: 50px;
+  position: relative;
+}
+.m-ca .ca-title::before {
+  content: "";
+  width: 57px;
+  height: 1px;
+  background: #ed4d5a;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+}
+.m-ca .cc-img {
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+.m-ca .ca-text {
+  width: 456px;
+  font-size: 13px;
+  color: #666;
+  padding: 20px 0;
+  line-height: 25px;
+  text-indent: 2em;
+}
+.m-ca .cd-text {
+  width: 456px;
+  font-size: 13px;
+  color: #666;
+  padding: 20px 0;
+  line-height: 25px;
+  text-indent: 2em;
+  height: 190px;
+  padding: 40px 0 0 0;
+}
+.m-ca .ca-img {
+  width: 100%;
+  overflow: hidden;
+}
+.m-cb {
+  width: 920px;
+  overflow: hidden;
+  margin: 0 auto;
+  position: relative;
+}
+.m-cb .m-ca-img {
+  width: 100%;
+  overflow: hidden;
+  text-align: center;
+}
+.m-cb .m-ca-img img {
+  margin-bottom: 10px;
+}
+.m-cb .ca-title {
+  font-size: 18px;
+  color: #666;
+  line-height: 50px;
+  position: relative;
+}
+.m-cb .ca-title::before {
+  content: "";
+  width: 57px;
+  height: 1px;
+  background: #ed4d5a;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+}
+.m-cb .cc-img {
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+.m-cb .ca-text {
+  width: 456px;
+  font-size: 13px;
+  color: #666;
+  padding: 20px 0;
+  line-height: 25px;
+  text-indent: 2em;
+}
+.m-cb .cd-text {
+  width: 456px;
+  font-size: 13px;
+  color: #666;
+  padding: 20px 0;
+  line-height: 25px;
+  text-indent: 2em;
+  height: 190px;
+  padding: 40px 0 0 0;
+}
+.m-cb .ca-img {
+  width: 100%;
+  overflow: hidden;
+}
+.m-cb .ca-text {
+  width: 446px;
+  float: left;
+  padding: 40px 0px 0 0;
+}
+.m-cb .ca-img {
+  width: 438px;
+  overflow: hidden;
+  float: right;
+}
+.m-cb .ca-img img {
+  margin-bottom: 15px;
+}
+.m-cc {
+  width: 920px;
+  overflow: hidden;
+  margin: 0 auto;
+  position: relative;
+}
+.m-cc .m-ca-img {
+  width: 100%;
+  overflow: hidden;
+  text-align: center;
+}
+.m-cc .m-ca-img img {
+  margin-bottom: 10px;
+}
+.m-cc .ca-title {
+  font-size: 18px;
+  color: #666;
+  line-height: 50px;
+  position: relative;
+}
+.m-cc .ca-title::before {
+  content: "";
+  width: 57px;
+  height: 1px;
+  background: #ed4d5a;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+}
+.m-cc .cc-img {
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+.m-cc .ca-text {
+  width: 456px;
+  font-size: 13px;
+  color: #666;
+  padding: 20px 0;
+  line-height: 25px;
+  text-indent: 2em;
+}
+.m-cc .cd-text {
+  width: 456px;
+  font-size: 13px;
+  color: #666;
+  padding: 20px 0;
+  line-height: 25px;
+  text-indent: 2em;
+  height: 190px;
+  padding: 40px 0 0 0;
+}
+.m-cc .ca-img {
+  width: 100%;
+  overflow: hidden;
+}
+.m-cc .ca-text {
+  width: 446px;
+  float: left;
+  padding: 40px 0px 0 0;
+}
+.m-cc .ca-img {
+  width: 438px;
+  overflow: hidden;
+  float: right;
+}
+.m-cc .ca-img img {
+  margin-bottom: 15px;
+}
+.m-cc .ca-text {
+  height: 168px;
+  position: relative;
+  float: none;
+}
+.m-cc .cd-img {
+  width: 110px;
+  height: 110px;
+  position: absolute;
+  bottom: 0px;
+  right: 0px;
+  border-radius: 50%;
+  overflow: hidden;
+}
+.m-cc .cd-img img {
+  float: left;
+}
+.m-cc .ca-img {
+  width: 100%;
+  overflow: hidden;
+  float: none;
+}
+.m-cc .ca-img img {
+  float: left;
+}
+.m-cc .ca-img img:last-child {
+  float: right;
+  width: 453px;
+  height: 190px;
+}
+.indus-center {
+  width: 100%;
+  text-align: center;
+  padding-bottom: 20px;
+}
+.indus-center img {
+  display: inline-block;
+  vertical-align: bottom;
+}
+.proper-center {
+  font-size: 13px;
+  color: #523633;
+  line-height: 25px;
+  padding: 25px 0 260px 0;
+}
+.proper-center span {
+  color: #ed4d5a;
+}

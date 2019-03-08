@@ -52,6 +52,13 @@ exports.guild_news = function (req, res) {
     });
 };
 
+// 新闻详情
+exports.new_details = function (req, res) {
+    Sitebase.findOne(function (err, result) {
+        res.render('website/news/new_details', { pageName: '行业资讯', site: result });
+    });
+};
+
 exports.project_news = function (req, res) {
     Sitebase.findOne(function (err, result) {
         res.render('website/news/project_news', { pageName: '项目进展', site: result });
@@ -70,6 +77,15 @@ exports.company_news = function (req, res) {
     });
 };
 
+// 加入我们
+exports.join_us = function (req, res) {
+    Sitebase.findOne(function (err, result) {
+        res.render('website/join/join_us', { pageName: '公司新闻', site: result });
+    });
+};
+
+
+
 // 联系我们
 exports.contact_us = function (req, res) {
     Sitebase.findOne(function (err, result) {
@@ -81,6 +97,39 @@ exports.contact_us = function (req, res) {
 exports.item_index = function (req, res) {
     Sitebase.findOne(function (err, result) {
         res.render('website/item/item_index', { pageName: '项目中心', site: result });
+    });
+}
+// 地产开发
+exports.item_land = function (req, res) {
+    Sitebase.findOne(function (err, result) {
+        res.render('website/item/item_land', { pageName: '项目中心', site: result });
+    });
+}
+
+// 商业营运
+exports.item_business = function (req, res) {
+    Sitebase.findOne(function (err, result) {
+        res.render('website/item/item_business', { pageName: '项目中心', site: result });
+    });
+}
+// 产业地产
+exports.item_industry = function (req, res) {
+    Sitebase.findOne(function (err, result) {
+        res.render('website/item/item_industry', { pageName: '项目中心', site: result });
+    });
+}
+
+// 基金管理
+exports.item_fund = function (req, res) {
+    Sitebase.findOne(function (err, result) {
+        res.render('website/item/item_fund', { pageName: '项目中心', site: result });
+    });
+}
+
+// 物业服务
+exports.item_property = function (req, res) {
+    Sitebase.findOne(function (err, result) {
+        res.render('website/item/item_property', { pageName: '项目中心', site: result });
     });
 }
 

@@ -1,0 +1,155 @@
+<%include ../common/include_header.html%>
+<link rel="stylesheet" href="/web/css/about.css">
+<style>
+  .mega-nav {
+    box-sizing: border-box;
+    text-align: center;
+    border-bottom: 2px solid #e5e5e5;
+  }
+
+  .mega-nav-item {
+    display: inline-block;
+    position: relative;
+    top: 2px;
+    font-size: 14px;
+    line-height: 2.366;
+    padding: 0 10px;
+  }
+
+  .layui-carousel-ind ul,
+  .layui-carousel-ind ul:hover {
+    background-color: transparent;
+  }
+
+  .mega-this {
+    border-bottom: 2px solid #e53333;
+  }
+
+  .layui-breadcrumb {
+    float: right;
+    margin-bottom: 44px;
+  }
+
+  .layui-carousel-ind li {
+    width: 17px;
+    height: 2px;
+    border-radius: 0;
+    background-color: transparent;
+    border: 1px solid #e02627;
+  }
+
+  .layui-carousel-ind li.layui-this {
+    background-color: #e02627;
+  }
+
+  .land-b {
+    height: 493px;
+  }
+
+  .land-b p {
+    height: 493px;
+    overflow: hidden;
+  }
+
+  .title {
+    position: absolute;
+    left: 150px;
+    top: 68px;
+    font-size: 26px;
+    color: #ed4d5a;
+    font-weight: 300;
+  }
+</style>
+<!-- banner部分 -->
+<div class="index-banner">
+  <div class="layui-carousel" id="land">
+    <div carousel-item="">
+      <div class="land-b">
+        <p><img src="/web/img/banner2.jpg" alt=""></p>
+      </div>
+      <div class="land-b">
+        <p><img src="/web/img/banner1.jpg" alt=""></p>
+      </div>
+      <div class="land-b">
+        <p><img src="/web/img/banner2.jpg" alt=""></p>
+      </div>
+      <div class="land-b">
+        <p><img src="/web/img/banner1.jpg" alt=""></p>
+      </div>
+      <div class="land-b">
+        <p><img src="/web/img/banner2.jpg" alt=""></p>
+      </div>
+      <div class="land-b">
+        <p><img src="/web/img/banner1.jpg" alt=""></p>
+      </div>
+    </div>
+  </div>
+</div>
+<ul class="mega-nav">
+  <li class="mega-nav-item mega-this"><a href="#ren">办公环境</a></li>
+  <li class="mega-nav-item"><a href="#li">人才理念</a></li>
+  <li class="mega-nav-item"><a href="#fu">员工福利</a></li>
+</ul>
+
+<div class="layui-container">
+  <span class="layui-breadcrumb" lay-separator=">">
+    <a href="/"><span class="iconfont icon-shouye"></span>首页</a>
+    <a><cite>加入我们</cite></a>
+  </span>
+</div>
+
+<!-- main部分 -->
+<div class="layui-container main">
+  <div class="land-m-top">
+    <img style="position:absolute;" src="/web/img/honor/lefttop.png" alt="引领城市新生活方式">
+    <div style="height: 125px;"></div>
+  </div>
+  <div class="land-m-center">
+    <div id="ren"></div>
+    <div class="join-title">
+      办公环境
+    </div>
+    <div class="join-main">
+      <div class="m-righ">
+        <img src="/web/img/about/j1.jpg" alt="">
+      </div>
+      <div class="m-left">
+        办公地点位于福田竹子林中国经贸大厦（竹子林站B2出口直行200米），周边树木繁茂、环境舒适。站在办公区南面可俯瞰红树林生态公园，无限海景尽收眼底，大厦背面为园博园，曲径通幽，鸟语花香，饭后散步园中更是身心舒畅。
+        2000㎡豪华舒适办公区，让你每天上班都有好心情。
+      </div>
+    </div>
+    <div id="li"></div>
+    <div class="join-title">
+      人才理念
+    </div>
+    <div class="join-main">
+      <div class="m-righ">
+        <img src="/web/img/about/j2.jpg" alt="">
+      </div>
+      <div class="m-left">
+        <p>尊重人才：</p>
+        <p>共同发展：</p>
+        <p>敬业为本：</p>
+        <p>优胜劣汰：</p>
+      </div>
+    </div>
+    <div id="fu"></div>
+    <div class="join-title">
+      员工福利
+    </div>
+    <div class="join-ul">
+      <ul>
+        <li>员工午餐：公司免费为员工提供丰富可口的工作餐（六菜一汤）</li>
+        <li>5天7小时：周一至周五为工作日（09：00-18：00），中午休息2小时</li>
+        <li>节日津贴：中国传统及国际重大节假日，给员工发放丰厚的过节费或礼品</li>
+        <li>高温补贴：深圳地区每年6月至10月按月度发放高温补贴，150元/月</li>
+        <li>通讯补贴：根据员工级别，按月度发放通讯补贴</li>
+        <li>生日津贴：定期举办员工生日会活动，并给当月生日的员工发放生日津贴</li>
+        <li>五险一金：自入职之日起（当月18日前入职），为员工购买五险一金</li>
+        <li>春节假期：为满足员工春节回家探亲诉求，公司一般安排提前放假并延后节后开工</li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+<%include ../common/include_footer.html%>

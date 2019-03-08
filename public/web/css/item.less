@@ -1,0 +1,106 @@
+.land-m-top{
+  margin-top: 25px;
+}
+.land-industry{
+  height: 442px; overflow: hidden;;
+  img{
+    margin-top: -100px;
+  }
+}
+#land{
+  img{
+    margin-top: -100px;
+  }
+}
+.land-m-center{
+  width: 920px; margin: 0 auto;
+  .layui-carousel-ind ul,
+    .layui-carousel-ind ul:hover {
+      background-color: transparent;
+    }
+    .layui-carousel-ind li {
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background-color: transparent;
+      border: 1px solid #e02627;
+    }
+
+    .layui-carousel-ind li.layui-this {
+      background-color: #e02627;
+    }
+
+    .mega-this {
+      border-bottom: 2px solid #e53333;
+    }
+}
+.m-ca{
+  width: 920px; overflow: hidden; margin: 0 auto;  position: relative;
+  .m-ca-img{
+    width: 100%; overflow: hidden; text-align: center;
+      img{margin-bottom: 10px;}
+    }
+  .ca-title{
+    font-size: 18px; color: #666; line-height: 50px; position: relative;
+    &::before{
+      content: ""; width: 57px; height: 1px; background: #ed4d5a; position: absolute; left: 0; bottom: 0;
+    }
+  }
+  .cc-img{
+    position: absolute; right: 0; top: 0;
+  }
+  .ca-text{
+    width: 456px; font-size: 13px; color: #666; padding: 20px 0; line-height: 25px; text-indent: 2em;
+  }
+  .cd-text{
+    .ca-text; height: 190px; padding: 40px 0 0 0;
+  }
+  .ca-img{
+    width: 100%; overflow: hidden;
+  }
+}
+
+.m-cb{
+  .m-ca;
+  .ca-text{
+    width: 446px; float: left; padding: 40px 0px 0 0;
+  }
+  .ca-img{
+    width: 438px; overflow: hidden; float: right;
+    img{
+      margin-bottom: 15px;
+    }
+  }
+}
+.m-cc{
+  .m-cb;
+  .ca-text{
+    height: 168px; position: relative; float: none;
+  }
+  .cd-img{
+    width:110px; height: 110px; position: absolute; bottom: 0px; right: 0px; border-radius: 50%; overflow: hidden;
+    img{ float: left;}
+  }
+  .ca-img{
+    width: 100%; overflow: hidden; float: none;
+    img{
+      float: left;
+    }
+    img:last-child{
+      float: right; width: 453px; height: 190px;
+    }
+  }
+}
+.indus-center{
+  width: 100%; text-align: center; padding-bottom: 20px;
+  img{
+    display: inline-block; vertical-align: bottom;
+  }
+}
+
+.proper-center{
+  font-size: 13px; color: #523633; line-height: 25px; padding: 25px 0 260px 0;
+  span{
+    color: #ed4d5a;
+  }
+}

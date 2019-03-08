@@ -1,0 +1,112 @@
+<%include ../common/include_header.html%>
+<style>
+  .mega-banner {
+    height: 186px;
+    background: url(/web/img/banner1.jpg) no-repeat center -220px;
+  }
+
+  .mega-nav {
+    box-sizing: border-box;
+    text-align: center;
+    border-bottom: 2px solid #e5e5e5;
+  }
+
+  .mega-nav-item {
+    display: inline-block;
+    position: relative;
+    top: 2px;
+    font-size: 14px;
+    line-height: 2.366;
+    padding: 0 10px;
+  }
+
+  .mega-this {
+    border-bottom: 2px solid #e53333;
+  }
+
+  .layui-breadcrumb {
+    float: right;
+    margin-bottom: 44px;
+  }
+
+  .main {
+    position: relative;
+    margin-top: 24px;
+    min-height: 660px;
+  }
+
+  .mian p {
+    font-size: 13px;
+  }
+
+  .title {
+    position: absolute;
+    left: 150px;
+    top: 68px;
+    font-size: 26px;
+    color: #ed4d5a;
+    font-weight: 300;
+  }
+
+  .news-ul {
+    border-top: 1px dashed #c9c9c9
+  }
+
+  .news-ul li {
+    position: relative;
+    height: 90px;
+    border-bottom: 1px dashed #c9c9c9;
+    padding: 24px 133px;
+    cursor: pointer;
+  }
+
+  .news-ul li:hover{
+    background: #f8e8e8;
+    background-image: url(/web/img/news/search.png);
+    background-repeat: no-repeat;
+    background-position: center right;
+  }
+  
+</style>
+<link rel="stylesheet" href="/web/css/news.css">
+<div class="mega-banner"></div>
+<ul class="mega-nav">
+  <li class="mega-nav-item  mega-this"><a href="/company_news">公司新闻</a></li>
+  <li class="mega-nav-item"><a href="/business_news">商业动态</a></li>
+  <li class="mega-nav-item"><a href="/project_news">项目进展</a></li>
+  <li class="mega-nav-item"><a href="/guild_news">行业资讯</a></li>
+</ul>
+
+<div class="layui-container">
+  <span class="layui-breadcrumb" lay-separator=">">
+    <a href="/"><span class="iconfont icon-shouye"></span>首页</a>
+    <a><cite>公司新闻</cite></a>
+  </span>
+</div>
+<div class="layui-container main">
+  <img style="position:absolute;" src="/web/img/honor/lefttop.png" alt="引领城市新生活方式">
+  <h1 class="title">NEWS</h1>
+  <div style="height: 125px;"></div>
+  <div class="new_content">
+    <div class="content-titl">铜川市与深圳美佳华实业有限公司举行座谈会</div>
+    <div class="content-m">
+      <div class="m-left">
+        <p>2018年8月30日，铜川市与深圳美佳华实业有限公司在铜川美佳华商业中心项目现场举行座谈会，市委书记郭大为、深圳美佳华实业有限公司董事长洪小佳出席，副市长刘丽参加。 
+        <p>座谈会上，郭大为听取了美佳华公司关于铜川美佳华商业中心项目的商业理念、业态分布以及运营管理理念等情况的汇报，市级相关部门主要负责人就为美佳华项目做好保障服务作了表态发言。</p>
+        <p>座谈会前，郭大为一行视察了美佳华商业中心项目建设现场，详细了解项目进度、招商情况等相关情况。（摄影：何景辉）</p>
+        <p><img src="/web/img/news/n1.jpg" alt=""></p>
+      </div>
+      <div class="m-right">
+        <h3><img src="/web/img/news/n2.jpg" alt=""> 相关新闻</h3>
+        <ul>
+          <li><a href="#">2017/06/30  美佳华商业——倾听新的声音</a></li>
+          <li><a href="#">2017/06/30  美佳华商业——倾听新的声音</a></li>
+          <li><a href="#">2017/06/30  美佳华商业——倾听新的声音</a></li>
+          <li><a href="#">2017/06/30  美佳华商业——倾听新的声音</a></li>
+          <li><a href="#">2017/06/30  美佳华商业——倾听新的声音</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
+<%include ../common/include_footer.html%>

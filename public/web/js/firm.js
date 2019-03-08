@@ -24,6 +24,30 @@ layui.define(['jquery', 'element', 'carousel', 'laypage'], function(exports){
     ,full: false
   });
 
+  //轮播渲染
+  carousel.render({
+    elem: '#land'
+    ,width: '100%'
+    ,height: '493px'
+    ,arrow: 'none'
+    ,indicator: 'inside'
+    ,interval: '3000'
+    ,anim:'fade'
+    ,full: false
+  });
+
+  //轮播渲染
+  carousel.render({
+    elem: '#land-center'
+    ,width: '920px'
+    ,height: '643px'
+    ,arrow: 'none'
+    ,indicator: 'inside'
+    ,interval: '3000'
+    ,anim:'fade'
+    ,full: false
+  });
+
   carousel.render({
     elem: '#news-row'
     ,width: '528px'

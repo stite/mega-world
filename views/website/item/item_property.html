@@ -1,0 +1,93 @@
+<%include ../common/include_header.html%>
+<link rel="stylesheet" href="/web/css//item.css">
+<style>
+    .mega-nav {
+        box-sizing: border-box;
+        text-align: center;
+        border-bottom: 2px solid #e5e5e5;
+    }
+
+    .mega-nav-item {
+        display: inline-block;
+        position: relative;
+        top: 2px;
+        font-size: 14px;
+        line-height: 2.366;
+        padding: 0 10px;
+    }
+    .layui-carousel-ind ul,
+    .layui-carousel-ind ul:hover {
+        background-color: transparent;
+    }
+    .mega-this {
+        border-bottom: 2px solid #e53333;
+    }
+
+    .layui-breadcrumb {
+        float: right;
+        margin-bottom: 44px;
+    }
+    .layui-carousel-ind li {
+        width: 17px;
+        height: 2px;
+        border-radius: 0;
+        background-color: transparent;
+        border: 1px solid #e02627;
+    }
+
+    .layui-carousel-ind li.layui-this {
+        background-color: #e02627;
+    }
+    .land-b{
+        height: 493px;
+    }
+    .land-b p{
+        height: 493px; overflow: hidden;
+    }
+    .title {
+        position: absolute;
+        left: 150px;
+        top: 68px;
+        font-size: 26px;
+        color: #ed4d5a;
+        font-weight: 300;
+    }
+</style>
+<!-- banner部分 -->
+<div class="land-industry">
+    <p><img src="/web/img/banner1.jpg" alt=""></p>
+</div>
+<ul class="mega-nav">
+    <li class="mega-nav-item"><a href="/company_news">地产开发</a></li>
+    <li class="mega-nav-item"><a href="/item_business">商业运营</a></li>
+    <li class="mega-nav-item"><a href="/item_industry">产业地产</a></li>
+    <li class="mega-nav-item"><a href="/item_fund">基金管理</a></li>
+    <li class="mega-nav-item mega-this"><a href="/item_property">物业服务</a></li>
+</ul>
+
+<div class="layui-container">
+    <span class="layui-breadcrumb" lay-separator=">">
+        <a href="/"><span class="iconfont icon-shouye"></span>首页</a>
+        <a><cite>物业服务</cite></a>
+    </span>
+</div>
+
+<!-- main部分 -->
+<div class="layui-container main">
+    <div class="land-m-top">
+        <img style="position:absolute;" src="/web/img/honor/lefttop.png" alt="引领城市新生活方式">
+        <div style="height: 125px;"></div>
+    </div>
+    <div class="land-m-center">
+            <div class="m-ca">
+                    <div class="ca-title">美佳华物业服务</div>
+                    <div class="proper-center">
+                        <p>深圳市美佳华物业管理有限公司是深圳美佳华实业有限公司在深圳成立的专业从事社区物业管理服务业务，具有独立法人资格的物业管理企业。</p>
+                        <p>深圳市美佳华物业管理有限公司秉承“<span>用心服务</span>”、“<span>业主至上</span>”、“<span>诚信为本</span>”的服务理念。</p>
+                        <p>坚持服务标准化、管理人性化、创新持续化、品牌增值化，为邻里社区提供优质、专业、和谐的物业管理环境。</p>
+                    </div>
+                </div>
+    </div>
+</div>
+
+<%include ../common/include_footer.html%>

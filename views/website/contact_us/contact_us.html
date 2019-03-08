@@ -1,135 +1,99 @@
 <%include ../common/include_header.html%>
-  <div class="banner about">
-    <div class="title">
-      <p>关于我们</p>
-      <p class="en">About Us</p>
-    </div>
+<link rel="stylesheet" href="/web/css/item.css">
+<style>
+  .mega-nav {
+    box-sizing: border-box;
+    text-align: center;
+    border-bottom: 2px solid #e5e5e5;
+  }
+
+  .mega-nav-item {
+    display: inline-block;
+    position: relative;
+    top: 2px;
+    font-size: 14px;
+    line-height: 2.366;
+    padding: 0 10px;
+  }
+
+  .layui-carousel-ind ul,
+  .layui-carousel-ind ul:hover {
+    background-color: transparent;
+  }
+
+  .mega-this {
+    border-bottom: 2px solid #e53333;
+  }
+
+  .layui-breadcrumb {
+    float: right;
+    margin-bottom: 44px;
+  }
+
+  .layui-carousel-ind li {
+    width: 17px;
+    height: 2px;
+    border-radius: 0;
+    background-color: transparent;
+    border: 1px solid #e02627;
+  }
+
+  .layui-carousel-ind li.layui-this {
+    background-color: #e02627;
+  }
+
+  .land-b {
+    height: 493px;
+  }
+
+  .land-b p {
+    height: 493px;
+    overflow: hidden;
+  }
+
+  .title {
+    position: absolute;
+    left: 150px;
+    top: 68px;
+    font-size: 26px;
+    color: #ed4d5a;
+    font-weight: 300;
+  }
+</style>
+<!-- banner部分 -->
+<div class="land-industry">
+  <p><img src="/web/img/banner1.jpg" alt=""></p>
+</div>
+<ul class="mega-nav" style="height:150px;">
+
+</ul>
+
+<div class="layui-container">
+  <span class="layui-breadcrumb" lay-separator=">">
+    <a href="/"><span class="iconfont icon-shouye"></span>首页</a>
+    <a><cite>联系我们</cite></a>
+  </span>
+</div>
+
+<!-- main部分 -->
+<div class="layui-container main">
+  <div class="land-m-top">
+    <img style="position:absolute;" src="/web/img/honor/lefttop.png" alt="引领城市新生活方式">
+    <div style="height: 125px;"></div>
   </div>
-    <!-- main部分 -->
-  <div class="main-about">
-    <div class="layui-container">
-      <div class="layui-row">
-        <ul class="aboutab">
-          <li class="layui-this">公司简介</li><li>招贤纳士</li><li>发展历程</li>
-        </ul>
-        <div class="tabIntro">
-          <div class="content">
-            <div class="layui-inline img"><img src="/web/img/us_img1.jpg"></div><div class="layui-inline panel">
-              <p>身处在前端社区的繁荣之下，我们都在有意或无意地追逐。而 layui 偏偏回望当初，奔赴在返璞归真的漫漫征途，自信并勇敢着，追寻于原生态的书写指令，试图以最简单的方式诠释高效。</p>
-            </div>
-          </div>
-          <div class="content">
-            <div class="layui-inline panel p_block">
-              <p>如果眼下还是一团零星之火，那运筹帷幄之后，迎面东风，就是一场烈焰燎原吧，那必定会是一番尽情的燃烧。待，秋风萧瑟时，散作满天星辰，你看那四季轮回，正是Layui不灭的执念。</p>
-            </div><div class="layui-inline img"><img src="/web/img/us_img2.jpg"></div>
-              <p class="p_hidden">如果眼下还是一团零星之火，那运筹帷幄之后，迎面东风，就是一场烈焰燎原吧，那必定会是一番尽情的燃烧。待，秋风萧瑟时，散作满天星辰，你看那四季轮回，正是Layui不灭的执念。</p>
-          </div>
-          <div class="content">
-            <div class="layui-inline img"><img src="/web/img/us_img3.jpg"></div><div class="layui-inline panel">
-              <p>拥有双面的不仅是人生，还有Layui。一面极简，一面丰盈。极简是视觉所见的外在，是开发所念的简易。丰盈是倾情雕琢的内在，是信手拈来的承诺。一切本应如此，简而全，双重体验。</p>
-            </div>
-          </div>         
-        </div>
-        <div class="tabJob">
-          <div class="content">
-            <p class="title">前端开发工程师</p>
-            <p>> 职位描述</p>
-            <ol>
-              <li>前端开发及维护工作；</li>
-              <li>有良好的技术基础，熟悉 Web 标准，熟练掌握多种 Web 前端技术；</li>
-              <li>掌握行业内流行的类库，Vue.js， React 等主流框架；</li>
-              <li>参与公司前端工程的设计、研发；</li>
-              <li>了解不同浏览器之间的差异，移动设备之间的差异。</li>
-            </ol>
-          </div>
-          <div class="content">
-            <p class="title">IOS 开发工程师</p>
-            <p>> 职位描述</p>
-            <ol>
-              <li>前端开发及维护工作；</li>
-              <li>有良好的技术基础，熟悉 Web 标准，熟练掌握多种 Web 前端技术；</li>
-              <li>掌握行业内流行的类库，Vue.js， React 等主流框架；</li>
-              <li>参与公司前端工程的设计、研发；</li>
-              <li>了解不同浏览器之间的差异，移动设备之间的差异。</li>
-            </ol>
-          </div>
-          <div class="content">
-            <p class="title">JAVA 工程师</p>
-            <p>> 职位描述</p>
-            <ol>
-              <li>前端开发及维护工作；</li>
-              <li>有良好的技术基础，熟悉 Web 标准，熟练掌握多种 Web 前端技术；</li>
-              <li>掌握行业内流行的类库，Vue.js， React 等主流框架；</li>
-              <li>参与公司前端工程的设计、研发；</li>
-              <li>了解不同浏览器之间的差异，移动设备之间的差异。</li>
-            </ol>
-          </div>
-        </div>
-        <div class="tabCour">
-          <p class="title">我们的蜕变</p>
-          <ul class="timeline">
-            <li class="odd">
-              <div class="cour-img"><img src="/web/img/us_img4.png"></div>
-              <div class="cour-panel layui-col-sm4 layui-col-lg5">
-                <p class="label">2017 年 6 月</p>
-                <p>我们成立了，来到了杭州西湖这个美丽的地方。</p>
-              </div>
-            </li>
-            <li>
-              <div class="cour-img"><img src="/web/img/us_img5.png"></div>
-              <div class="cour-panel layui-col-sm4 layui-col-sm-offset8 layui-col-lg5 layui-col-lg-offset7">
-                <p class="label">2017 年 6 月</p>
-                <p>我们成立了，来到了杭州西湖这个美丽的地方。</p>
-              </div>
-            </li>
-            <li class="odd">
-              <div class="cour-img"><img src="/web/img/us_img6.png"></div>
-              <div class="cour-panel layui-col-sm4 layui-col-lg5">
-                <p class="label">2017 年 6 月</p>
-                <p>我们成立了，来到了杭州西湖这个美丽的地方。</p>
-              </div>
-            </li>
-            <li>
-              <div class="cour-img"><img src="/web/img/us_img7.png"></div>
-              <div class="cour-panel layui-col-sm4 layui-col-sm-offset8 layui-col-lg5 layui-col-lg-offset7">
-                <p class="label">2017 年 6 月</p>
-                <p>我们成立了，来到了杭州西湖这个美丽的地方。</p>
-              </div>
-            </li>
-            <li class="odd">
-              <div class="cour-img"><img src="/web/img/us_img8.png"></div>
-            </li>
-          </ul>
-        </div>
+  <div class="land-m-center">
+    <div class="m-cb" style="height:320px;">
+      <div class="ca-title">美佳华实业有限公司</div>
+      <div class="ca-text" style="color:#523633">
+        <p>地址：深圳市竹子林紫竹七道中国经贸大厦</p>
+        <p>邮编：518000</p>
+        <p>电话：0755-82537711 传真：0755-82537722</p>
       </div>
+      <div class="cc-img">
+          <img src="/web/img/about/c1.jpg" alt="">
+        </div>
     </div>
   </div>
+</div>
 
 <%include ../common/include_footer.html%>
-
-<!--jquery修改首页导航样式-->
-<script>
-    $(function (){
-        $("#contact_us").addClass("active");
-    });
-
-    /*提交反馈信息*/
-    $('#submit').on('click', function() {
-        var name=$("#name").val();
-        var email=$("#email").val();
-        var phone=$("#phone").val();
-        var message=$("#message").val();
-        if(name==""||email==""||phone==""||message==""){
-            alert('信息录入不完整');
-            return;
-        }
-        $.post("/post_feedback", {name: name,email: email,phone: phone,message: message,}, function (result) {
-            if (result.status === "success") {
-                alert("信息提交成功,客服将会尽快和你联系");
-            } else {
-                alert("信息提交成功");
-            }
-        });
-    });
-
-</script>

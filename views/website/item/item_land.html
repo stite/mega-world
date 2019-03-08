@@ -1,0 +1,185 @@
+<%include ../common/include_header.html%>
+<link rel="stylesheet" href="/web/css//item.css">
+<style>
+    .mega-nav {
+        box-sizing: border-box;
+        text-align: center;
+        border-bottom: 2px solid #e5e5e5;
+    }
+
+    .mega-nav-item {
+        display: inline-block;
+        position: relative;
+        top: 2px;
+        font-size: 14px;
+        line-height: 2.366;
+        padding: 0 10px;
+    }
+    .layui-carousel-ind ul,
+    .layui-carousel-ind ul:hover {
+        background-color: transparent;
+    }
+    .mega-this {
+        border-bottom: 2px solid #e53333;
+    }
+
+    .layui-breadcrumb {
+        float: right;
+        margin-bottom: 44px;
+    }
+    .layui-carousel-ind li {
+        width: 17px;
+        height: 2px;
+        border-radius: 0;
+        background-color: transparent;
+        border: 1px solid #e02627;
+    }
+
+    .layui-carousel-ind li.layui-this {
+        background-color: #e02627;
+    }
+    .land-b{
+        height: 493px;
+    }
+    .land-b p{
+        height: 493px; overflow: hidden;
+    }
+    .title {
+        position: absolute;
+        left: 150px;
+        top: 68px;
+        font-size: 26px;
+        color: #ed4d5a;
+        font-weight: 300;
+    }
+</style>
+<!-- banner部分 -->
+<div class="index-banner">
+    <div class="layui-carousel" id="land">
+        <div carousel-item="">
+            <div class="land-b">
+                <p><img src="/web/img/banner2.jpg" alt=""></p>
+            </div>
+            <div class="land-b">
+                <p><img src="/web/img/banner1.jpg" alt=""></p>
+            </div>
+            <div class="land-b">
+                <p><img src="/web/img/banner2.jpg" alt=""></p>
+            </div>
+            <div class="land-b">
+                <p><img src="/web/img/banner1.jpg" alt=""></p>
+            </div>
+            <div class="land-b">
+                <p><img src="/web/img/banner2.jpg" alt=""></p>
+            </div>
+            <div class="land-b">
+                <p><img src="/web/img/banner1.jpg" alt=""></p>
+            </div>
+        </div>
+    </div>
+</div>
+<ul class="mega-nav">
+    <li class="mega-nav-item mega-this"><a href="/item_land">地产开发</a></li>
+    <li class="mega-nav-item"><a href="/item_business">商业运营</a></li>
+    <li class="mega-nav-item"><a href="/item_industry">产业地产</a></li>
+    <li class="mega-nav-item"><a href="/item_fund">基金管理</a></li>
+    <li class="mega-nav-item"><a href="/item_property">物业服务</a></li>
+</ul>
+
+<div class="layui-container">
+    <span class="layui-breadcrumb" lay-separator=">">
+        <a href="/"><span class="iconfont icon-shouye"></span>首页</a>
+        <a><cite>地产开发</cite></a>
+    </span>
+</div>
+
+<!-- main部分 -->
+<div class="layui-container main">
+    <div class="land-m-top">
+        <img style="position:absolute;" src="/web/img/honor/lefttop.png" alt="引领城市新生活方式">
+        <div style="height: 125px;"></div>
+    </div>
+    <div class="land-m-center">
+        <div class="layui-carousel" id="land-center">
+            <div carousel-item="">
+              <div class="m-ca">
+                <div class="m-ca-img">
+                  <img src="/web/img/item/land1.jpg" alt="">
+                  <img src="/web/img/item/land2.jpg" alt="">
+                  <img src="/web/img/item/land3.jpg" alt="">
+                </div>
+              </div>
+              <div class="m-cb">
+                <div class="ca-title">荆州美佳华商业广场</div>
+                <div class="ca-text">
+                  荆州美佳华商业广场位于荆州市城区核心商圈的黄金区域——北京中路及江汉北路交汇处，占地面积22394平米，建筑面积70583平米，业态组合涵盖沃尔玛、时尚名品、文化娱乐和休闲，是集购物、美食、休闲、娱乐于一体的商业地标，是当地最具影响力的商业中心。
+                </div>
+                <div class="ca-img">
+                  <img src="/web/img/item/land4.jpg" alt="">
+                  <img src="/web/img/item/land5.jpg" alt="">
+                </div>
+              </div>
+              <div class="m-cc">
+                <div class="ca-title">江西萍乡·美佳华商业广场</div>
+                <div class="ca-text">
+                  萍乡美佳华商业广场位于萍乡市经济技术开发区经贸大厦南侧地块，新市政府办公大楼斜对面，处于未来的城市核心位置，占地面积42588平米，建筑面积17万平米，是一个休闲餐饮娱乐文化体验中心、精品购物中心、高星级酒店、高端商务公寓为一体的大型城市综合体。
+                </div>
+                <div class="cc-img">
+                  <img src="/web/img/item/land14.jpg" alt="">
+                </div>
+                <div class="ca-img">
+                  <img src="/web/img/item/land15.jpg" alt="">
+                  <img src="/web/img/item/land16.jpg" style="width:444px; height:194px;" alt="">
+                </div>
+              </div>
+              <div class="m-cc">
+                <div class="ca-title">陕西铜川·美佳华商业广场</div>
+                <div class="ca-text">
+                  铜川美佳华商业广场位于铜川市新区华夏南道与华原东路交汇处，占地面积42001.9平米，建筑面积14万平米，是集大型超市、精品购物中心、高尚步行街、商务公寓于一体的城市综合体，更是铜川市的地标建筑。
+                  <div class="cd-img">
+                      <img src="/web/img/item/land7.jpg" alt="">
+                    </div>
+                </div>
+                <div class="cc-img">
+                  <img src="/web/img/item/land6.jpg" alt="">
+                </div>
+                <div class="ca-img" style="margin-top:10px;">
+                  <img src="/web/img/item/land8.jpg" alt="">
+                  <img src="/web/img/item/land9.jpg" alt="">
+                </div>
+              </div>
+              <div class="m-cb">
+                <div class="ca-title">美佳华首誉·比邻新天地</div>
+                <div class="ca-text">
+                  美佳华首誉项目位于深圳观澜中心区，距离市中心16公里，项目占地2.7万平米，总建筑面积17万平米，其中商业2.5万平米，住宅6万平米，公寓4万平米，项目集超市、购物中心、商务公寓、高尚住宅等多种功能和业态为一体，是一个以“新区域、新中心、新生活”为理念的大型生态综合体项目。
+                </div>
+                <div class="ca-img">
+                  <img src="/web/img/item/land10.jpg" alt="">
+                  <img src="/web/img/item/land11.jpg" alt="">
+                </div>
+              </div>
+              <div class="m-ca">
+                <div class="ca-title">云南曲靖·美佳华麒麟商业广场</div>
+                <div class="cd-text">
+                  美佳华麒麟商业广场位于曲靖市核心商圈，占地面积14253平米，总建筑面积59062平米，项目在云南省地级城市率先引进体验式购物公园的商业新概念，进驻了包括沃尔玛、苏宁电器、肯德基、必胜客、中国移动、胜道中国在内的百货、家电、餐饮、休闲、娱乐等众多知名品牌商家。</div>
+                  <div class="cc-img">
+                    <img src="/web/img/item/land12.jpg" alt="">
+                  </div>
+                <div class="ca-img">
+                  <img src="/web/img/item/land13.jpg" alt="">
+                </div>
+              </div>
+              <div class="m-ca">
+                <div class="ca-title">云南玉溪·美佳华商业广场</div>
+                <div class="ca-text">
+                  玉溪美佳华商业广场是我司在内地开发的第一个项目，占地面积10106平米，总建筑面积43843平米，沃尔玛、麦当劳、美佳华数字影院、美佳华乐园及国内知名服装品牌进驻，是当地最具前瞻性的一站式购物中心。</div>
+                <div class="ca-img">
+                  <img src="/web/img/item/di_1.jpg" alt="">
+                </div>
+              </div>
+            </div>
+          </div>
+    </div>
+</div>
+
+<%include ../common/include_footer.html%>

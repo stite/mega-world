@@ -1,0 +1,49 @@
+#ren,
+#li,
+#fu {
+  height: 35px;
+}
+.join-title {
+  color: #666;
+  font-size: 18px;
+  line-height: 40px;
+  border-bottom: 2px solid #e53333;
+  display: inline-block;
+}
+.join-main {
+  width: 100%;
+  overflow: hidden;
+  background: #fff;
+  margin-top: 12px;
+}
+.join-main .m-righ {
+  float: right;
+}
+.join-main .m-left {
+  overflow: hidden;
+  font-size: 13px;
+  color: #523633;
+  line-height: 30px;
+  padding: 40px  15px;
+}
+.join-ul {
+  background: #fff;
+  width: 100%;
+  overflow: hidden;
+  margin-top: 12px;
+  padding: 10px;
+  box-sizing: border-box;
+}
+.join-ul li {
+  width: 50%;
+  float: left;
+  line-height: 35px;
+  color: #523633;
+  font-size: 13px;
+}
+.join-ul li::before {
+  content: "●";
+  font-size: 12px;
+  color: red;
+  padding-right: 10px;
+}
